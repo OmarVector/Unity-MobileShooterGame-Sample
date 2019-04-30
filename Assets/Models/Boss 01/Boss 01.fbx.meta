@@ -1,0 +1,266 @@
+fileFormatVersion: 2
+guid: d77760ae9551af644ba19accf8a8a17c
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Boss_BackShhield
+    100004: Boss_Engine
+    100006: Boss_FrontShield
+    100008: Boss_Gears_01
+    100010: Boss_Gears_02
+    100012: Boss_Gears_03
+    100014: Boss_RailGun_01
+    100016: Boss_RailGun_02
+    100018: Boss_RailGun_03
+    100020: Boss_RailGun_04
+    100022: Boss_Rockets_01
+    100024: Boss_Rockets_02
+    100026: Boss_SmallGun_01
+    100028: Boss_SmallGun_02
+    100030: Boss_SmallGun_03
+    100032: Boss_Tires_01
+    100034: Boss_Tires_02
+    100036: Boss_Tires_03
+    100038: Boss_Tires_04
+    400000: //RootNode
+    400002: Boss_BackShhield
+    400004: Boss_Engine
+    400006: Boss_FrontShield
+    400008: Boss_Gears_01
+    400010: Boss_Gears_02
+    400012: Boss_Gears_03
+    400014: Boss_RailGun_01
+    400016: Boss_RailGun_02
+    400018: Boss_RailGun_03
+    400020: Boss_RailGun_04
+    400022: Boss_Rockets_01
+    400024: Boss_Rockets_02
+    400026: Boss_SmallGun_01
+    400028: Boss_SmallGun_02
+    400030: Boss_SmallGun_03
+    400032: Boss_Tires_01
+    400034: Boss_Tires_02
+    400036: Boss_Tires_03
+    400038: Boss_Tires_04
+    2100000: Rockets_mat1
+    2100002: BackShield_mat1
+    2100004: FrontShield_mat1
+    2100006: SmallGun_mat1
+    2100008: Engine_mat1
+    2100010: Gears_mat1
+    2100012: BossTIreBase1
+    2100014: TireRoller1
+    2100016: RailGun_mat1
+    2100018: Rockets_mat
+    2100020: BackShield_mat
+    2100022: FrontShield_mat
+    2100024: SmallGun_mat
+    2100026: Engine_mat
+    2100028: Gears_mat
+    2100030: BossTIreBase
+    2100032: TireRoller
+    2100034: RailGun_mat
+    2300000: Boss_BackShhield
+    2300002: Boss_Engine
+    2300004: Boss_FrontShield
+    2300006: Boss_Gears_01
+    2300008: Boss_Gears_02
+    2300010: Boss_Gears_03
+    2300012: Boss_RailGun_01
+    2300014: Boss_RailGun_02
+    2300016: Boss_RailGun_03
+    2300018: Boss_RailGun_04
+    2300020: Boss_Rockets_01
+    2300022: Boss_Rockets_02
+    2300024: Boss_SmallGun_01
+    2300026: Boss_SmallGun_02
+    2300028: Boss_SmallGun_03
+    2300030: Boss_Tires_01
+    2300032: Boss_Tires_02
+    2300034: Boss_Tires_03
+    2300036: Boss_Tires_04
+    3300000: Boss_BackShhield
+    3300002: Boss_Engine
+    3300004: Boss_FrontShield
+    3300006: Boss_Gears_01
+    3300008: Boss_Gears_02
+    3300010: Boss_Gears_03
+    3300012: Boss_RailGun_01
+    3300014: Boss_RailGun_02
+    3300016: Boss_RailGun_03
+    3300018: Boss_RailGun_04
+    3300020: Boss_Rockets_01
+    3300022: Boss_Rockets_02
+    3300024: Boss_SmallGun_01
+    3300026: Boss_SmallGun_02
+    3300028: Boss_SmallGun_03
+    3300030: Boss_Tires_01
+    3300032: Boss_Tires_02
+    3300034: Boss_Tires_03
+    3300036: Boss_Tires_04
+    4300000: Boss_Rockets_02
+    4300002: Boss_Rockets_01
+    4300004: Boss_BackShhield
+    4300006: Boss_FrontShield
+    4300008: Boss_SmallGun_01
+    4300010: Boss_SmallGun_02
+    4300012: Boss_SmallGun_03
+    4300014: Boss_Engine
+    4300016: Boss_Gears_01
+    4300018: Boss_Gears_02
+    4300020: Boss_Gears_03
+    4300022: Boss_Tires_03
+    4300024: Boss_Tires_04
+    4300026: Boss_Tires_02
+    4300028: Boss_Tires_01
+    4300030: Boss_RailGun_04
+    4300032: Boss_RailGun_01
+    4300034: Boss_RailGun_02
+    4300036: Boss_RailGun_03
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BackShield_mat
+    second: {fileID: 2100000, guid: d8a9a7438f00580488493765ab2f26d1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BossTIreBase
+    second: {fileID: 2100000, guid: 3ae6d539a37313646977b2667c98d7cb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BossTIreBase1
+    second: {fileID: 2100000, guid: 3ae6d539a37313646977b2667c98d7cb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Engine_mat
+    second: {fileID: 2100000, guid: a2b9ba5321da5474a89729255cfc44e5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FrontShield_mat
+    second: {fileID: 2100000, guid: 32117c9f82ced5142aaea9edf20cb836, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FrontShield_mat1
+    second: {fileID: 2100000, guid: 32117c9f82ced5142aaea9edf20cb836, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gears_mat
+    second: {fileID: 2100000, guid: 804bb3b99a18e5441a3cd4561628a724, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RailGun_mat
+    second: {fileID: 2100000, guid: f1e4b1002975a1f4098cf16727d2d58e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rockets_mat
+    second: {fileID: 2100000, guid: 964f079fe6e56274ab43dd61d80500eb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SmallGun_mat
+    second: {fileID: 2100000, guid: 6117512740a92884cba35a2940444c17, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TireRoller
+    second: {fileID: 2100000, guid: 46237939aa5a57d45a92fe1a8e8c8fac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TireRoller1
+    second: {fileID: 2100000, guid: 46237939aa5a57d45a92fe1a8e8c8fac, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 3
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 0
+    importBlendShapes: 0
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
