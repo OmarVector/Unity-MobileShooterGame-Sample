@@ -1,0 +1,273 @@
+fileFormatVersion: 2
+guid: 1ef2401994f17fb409d550752813a998
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Buston
+    100002: Buston_Base
+    100004: Door_Frame_mesh
+    100006: DoorShape_mesh
+    100008: DoorShape_mesh 1
+    100010: DoorShape_mesh1
+    100012: EnginBase_01
+    100014: EnginBase_02
+    100016: Engine_Parts_01
+    100018: Engine_Parts_02
+    100020: Environment
+    100022: hm_result_mesh1
+    100024: //RootNode
+    100026: Jet_MainBody
+    100028: JetHoldersMesh
+    100030: Lap_Wall_mesh
+    100032: Magent_02
+    100034: Magnet_01
+    100036: MainJet_Grp
+    100038: MeshCrate
+    100040: Rockets_01
+    100042: Rockets_02
+    100044: transform1
+    100046: transform2
+    100048: Weapons
+    400000: Buston
+    400002: Buston_Base
+    400004: Door_Frame_mesh
+    400006: DoorShape_mesh
+    400008: DoorShape_mesh 1
+    400010: DoorShape_mesh1
+    400012: EnginBase_01
+    400014: EnginBase_02
+    400016: Engine_Parts_01
+    400018: Engine_Parts_02
+    400020: Environment
+    400022: hm_result_mesh1
+    400024: //RootNode
+    400026: Jet_MainBody
+    400028: JetHoldersMesh
+    400030: Lap_Wall_mesh
+    400032: Magent_02
+    400034: Magnet_01
+    400036: MainJet_Grp
+    400038: MeshCrate
+    400040: Rockets_01
+    400042: Rockets_02
+    400044: transform1
+    400046: transform2
+    400048: Weapons
+    2100000: Weapon
+    2100002: magnet
+    2100004: JetHolder
+    2100006: Engine
+    2100008: Mainbody
+    2100010: Rockets
+    2100012: Jet_Buston
+    2100014: JetBuston_Holder
+    2100016: Hanger_Land
+    2100018: Crate_Blood
+    2100020: DoorShape
+    2100022: DoorFrame
+    2100024: Lap_Wall
+    2300000: Buston
+    2300002: Buston_Base
+    2300004: Door_Frame_mesh
+    2300006: DoorShape_mesh
+    2300008: EnginBase_01
+    2300010: EnginBase_02
+    2300012: Engine_Parts_01
+    2300014: Engine_Parts_02
+    2300016: hm_result_mesh1
+    2300018: Jet_MainBody
+    2300020: JetHoldersMesh
+    2300022: Lap_Wall_mesh
+    2300024: Magent_02
+    2300026: Magnet_01
+    2300028: MeshCrate
+    2300030: Rockets_01
+    2300032: Rockets_02
+    2300034: Weapons
+    3300000: Buston
+    3300002: Buston_Base
+    3300004: Door_Frame_mesh
+    3300006: DoorShape_mesh
+    3300008: EnginBase_01
+    3300010: EnginBase_02
+    3300012: Engine_Parts_01
+    3300014: Engine_Parts_02
+    3300016: hm_result_mesh1
+    3300018: Jet_MainBody
+    3300020: JetHoldersMesh
+    3300022: Lap_Wall_mesh
+    3300024: Magent_02
+    3300026: Magnet_01
+    3300028: MeshCrate
+    3300030: Rockets_01
+    3300032: Rockets_02
+    3300034: Weapons
+    4300000: Weapons
+    4300002: Magnet_01
+    4300004: JetHoldersMesh
+    4300006: EnginBase_01
+    4300008: Engine_Parts_01
+    4300010: EnginBase_02
+    4300012: Magent_02
+    4300014: Engine_Parts_02
+    4300016: Jet_MainBody
+    4300018: Rockets_02
+    4300020: Rockets_01
+    4300022: Buston
+    4300024: Buston_Base
+    4300026: hm_result_mesh1
+    4300028: MeshCrate
+    4300030: DoorShape_mesh
+    4300032: Door_Frame_mesh
+    4300034: Lap_Wall_mesh
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Crate_Blood
+    second: {fileID: 2100000, guid: 1c708afd922226b40b0e9b44bb1f5b62, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DoorFrame
+    second: {fileID: 2100000, guid: bb745c4766e99e7489e0e076e54f3a8d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DoorShape
+    second: {fileID: 2100000, guid: 767c726bef943144285e525520dd70a7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Engine
+    second: {fileID: 2100000, guid: 0f13c8bbe5bf97e46bd4cf4fe3adb828, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hanger_Land
+    second: {fileID: 2100000, guid: 5e9b50f8251548941b9d6f810f7771ae, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: JetBuston_Holder
+    second: {fileID: 2100000, guid: 627d46ea3a315184b8a89c9307da1783, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: JetHolder
+    second: {fileID: 2100000, guid: a20bd2e006ee6f9439ce8484d9e5545d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Jet_Buston
+    second: {fileID: 2100000, guid: 7cad3c0efdedffd428fc574aca6be939, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lap_Wall
+    second: {fileID: 2100000, guid: 1f728687a90e1ef4c8f903c475255a53, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mainbody
+    second: {fileID: 2100000, guid: e0bf7c5697a1f29448d899cf8db3a1ea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rockets
+    second: {fileID: 2100000, guid: 682250c73e7c73e4880f23ed118a6337, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Weapon
+    second: {fileID: 2100000, guid: ce7ff867cbc2b8b438492dbc8b2662da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: magnet
+    second: {fileID: 2100000, guid: b4daf799ec14d7d4fa04112c842ad5ef, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 10
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

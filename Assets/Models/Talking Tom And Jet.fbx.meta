@@ -1,0 +1,174 @@
+fileFormatVersion: 2
+guid: d9ca1f1f5e5529c41bdfefcb50ed8c42
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: EnginBase
+    100002: Engine_Parts
+    100004: Glass
+    100006: Jet_Base
+    100008: Jet_G
+    100010: pCube13
+    100012: Rockets_01
+    100014: Rockets_02
+    100016: Tail
+    100018: //RootNode
+    100020: Talking_Tom_mesh
+    100022: Tom_Glasses_mesh
+    100024: Weapons
+    100026: Wings
+    400000: EnginBase
+    400002: Engine_Parts
+    400004: Glass
+    400006: Jet_Base
+    400008: Jet_G
+    400010: pCube13
+    400012: Rockets_01
+    400014: Rockets_02
+    400016: Tail
+    400018: //RootNode
+    400020: Talking_Tom_mesh
+    400022: Tom_Glasses_mesh
+    400024: Weapons
+    400026: Wings
+    2100000: Jet
+    2100002: TalkingTom_Glasses
+    2100004: TalkingTom
+    2300000: EnginBase
+    2300002: Engine_Parts
+    2300004: Glass
+    2300006: Jet_Base
+    2300008: pCube13
+    2300010: Rockets_01
+    2300012: Rockets_02
+    2300014: Tail
+    2300016: Talking_Tom_mesh
+    2300018: Tom_Glasses_mesh
+    2300020: Weapons
+    2300022: Wings
+    3300000: EnginBase
+    3300002: Engine_Parts
+    3300004: Glass
+    3300006: Jet_Base
+    3300008: pCube13
+    3300010: Rockets_01
+    3300012: Rockets_02
+    3300014: Tail
+    3300016: Talking_Tom_mesh
+    3300018: Tom_Glasses_mesh
+    3300020: Weapons
+    3300022: Wings
+    4300000: Weapons
+    4300002: Rockets_01
+    4300004: EnginBase
+    4300006: Glass
+    4300008: Jet_Base
+    4300010: pCube13
+    4300012: Engine_Parts
+    4300014: Rockets_02
+    4300016: Wings
+    4300018: Tail
+    4300020: Tom_Glasses_mesh
+    4300022: Talking_Tom_mesh
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Jet
+    second: {fileID: 2100000, guid: 3f6409ba8b9600549989a746926e8691, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TalkingTom
+    second: {fileID: 2100000, guid: 916e57c71dfdbd846b1ddfdd6a0acd5d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TalkingTom_Glasses
+    second: {fileID: 2100000, guid: 677db31b6738765499c877e95d091e5f, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
