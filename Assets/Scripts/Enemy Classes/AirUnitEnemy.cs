@@ -8,7 +8,7 @@ public class AirUnitEnemy : ENEMY
     // player air explosion particles when air unit get destroyed.
     protected override void OnDeath()
     {
-        ExplosionPoolManager.explosionPoolManager.PlayAirParticle(transform);
+        ExplosionPoolManager.explosionPoolManager.PlayAirParticle(gameObject.transform);
         base.OnDeath();
     }
 

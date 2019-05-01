@@ -28,7 +28,7 @@ public class EliteUnitController : MonoBehaviour
     private void OnEnable()
     {
       
-        rigidBody.DOMoveZ(transform.position.z - 4, 4).SetEase(Ease.OutQuad).onComplete = delegate
+        rigidBody.DOMoveZ(transform.position.z - 10, 4).SetEase(Ease.OutQuad).onComplete = delegate
         {
             transform.SetParent(playerPath.transform);
             Invoke("OnTimeOut",3f);

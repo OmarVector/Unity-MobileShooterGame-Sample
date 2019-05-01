@@ -65,16 +65,13 @@ public class ExplosionPoolManager : MonoBehaviour
     public void PlayAirParticle(Transform trans)
     {
         // Pick a random particle from pool to play when the air unit get destroyed 
-        bool isActive = false;
-        while (!isActive)
+        for (int i = 0; i < PoolSizeAir; ++i)
         {
-            int i = Random.Range(0, PoolSizeTerrain);
             if (!AirUnitParticles[i].activeInHierarchy)
             {
                 AirUnitParticles[i].transform.position = trans.position;
                 AirUnitParticles[i].SetActive(true);
                 AirUnitParticles[i].GetComponent<ParticleSystem>().Play();
-                isActive = true;
                 return;
             }
         }
@@ -84,16 +81,15 @@ public class ExplosionPoolManager : MonoBehaviour
     public void PlayTerrainParticles(Transform trans)
     {
         // Pick a random particle from pool to play when the air unit get destroyed 
-        bool isActive = false;
-        while (!isActive)
+
+        for (int i = 0; i < PoolSizeTerrain; ++i)
         {
-            int i = Random.Range(0, PoolSizeTerrain);
             if (!TerrainUnitParticles[i].activeInHierarchy)
             {
                 TerrainUnitParticles[i].transform.position = trans.position;
                 TerrainUnitParticles[i].SetActive(true);
                 TerrainUnitParticles[i].GetComponent<ParticleSystem>().Play();
-                isActive = true;
+              
                 return;
             }
         }
