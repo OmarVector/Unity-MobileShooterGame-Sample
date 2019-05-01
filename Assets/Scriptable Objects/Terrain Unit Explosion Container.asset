@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 166c4cbbbe24bbc43812f103b67e248e, type: 3}
+  m_Name: AirUnit Explosion Container
+  m_EditorClassIdentifier: 
+  Particle_List:
+  - {fileID: 7811637782440633243, guid: e7384a286ea3bc24b81c01d43a87b1fb, type: 3}
+  - {fileID: 784806222645536102, guid: e49042004b6997649b612b5736da5c50, type: 3}
+  - {fileID: 3736504181664828437, guid: 8e0f960cb809df544a102bd962e3b864, type: 3}
+  - {fileID: 154203705408692936, guid: 194b0e5058a4f674e92e9f8e9342cf59, type: 3}
+  - {fileID: 98279610893094489, guid: 97978dc7065e11e43b0579be12ab4178, type: 3}
+  - {fileID: 7844871398890966678, guid: a3a2f51493eb98d4fb570d9ca3cae417, type: 3}
+  - {fileID: 755282081501342114, guid: ca23c3b551ec9d541a4997f8274e9d6d, type: 3}
+  - {fileID: 1912312290303280002, guid: 97c6a979960cb444d98873025e96f2f7, type: 3}
+  - {fileID: 4544431379478213322, guid: d493cf688d9e63b41b1986313a08e369, type: 3}
+  - {fileID: 7834489282500502415, guid: cae74951eeb84924eb953ff518a4ee06, type: 3}
+  - {fileID: 8932540717579662416, guid: 981a0932ce1e61446b6920830d503c12, type: 3}

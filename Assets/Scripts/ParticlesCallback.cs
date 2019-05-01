@@ -4,6 +4,6 @@ public class ParticlesCallback : MonoBehaviour
 {
    private void OnParticleSystemStopped()
    {
-      ExplosionsPool.explosionsPool.ReturnEnemyToPool(gameObject);
+      ExplosionPoolManager.explosionPoolManager.ReturnEnemyToPool(gameObject);
    }
 }
