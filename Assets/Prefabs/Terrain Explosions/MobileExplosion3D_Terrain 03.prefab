@@ -4894,8 +4894,9 @@ GameObject:
   - component: {fileID: 4230376785166651773}
   - component: {fileID: 3814665198774461296}
   - component: {fileID: 2148345609318186765}
+  - component: {fileID: 3545286049945000205}
   m_Layer: 0
-  m_Name: MobileExplosion3D_Air 03
+  m_Name: MobileExplosion3D_Terrain 03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9613,6 +9614,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particlesScale: 8
+--- !u!114 &3545286049945000205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2567071917638030293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2019a685615a0a419144a875a56503b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3331885765085581003
 GameObject:
   m_ObjectHideFlags: 0

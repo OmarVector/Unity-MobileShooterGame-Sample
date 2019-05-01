@@ -3383,6 +3383,36 @@ PrefabInstance:
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c8593b6a5421734391695ba68b1b4d0, type: 3}
+--- !u!1 &1066863144
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1066863145}
+  m_Layer: 0
+  m_Name: '----- Managers'
+  m_TagString: EditorOnly
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1066863145
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066863144}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 38.183, y: -3.018244, z: 117.449905}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1096753928 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 83594657754946755, guid: 4b2a7cee51356c64ca80da565fa94a4d,
@@ -3920,6 +3950,54 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 30, y: 6.661338e-15, z: 30}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1322701343
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1322701345}
+  - component: {fileID: 1322701344}
+  m_Layer: 0
+  m_Name: Explosion Pool Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1322701344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322701343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86cab0312aec50c47ae7d9432e5e294a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PoolSizeAir: 11
+  PoolSizeTerrain: 11
+  AirUnitContainer: {fileID: 11400000, guid: ee4a7c1c289e4a840aa464977bfeb6b7, type: 2}
+  TerrainUnitContainer: {fileID: 11400000, guid: 81e249ef9f2f48344baa95daf4a6a522,
+    type: 2}
+--- !u!4 &1322701345
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322701343}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 38.183, y: -3.018244, z: 117.449905}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1339491959 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 39bdea866ad6c9c479ab1fe7bb0f87ce,
