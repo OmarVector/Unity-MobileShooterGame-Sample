@@ -63,6 +63,7 @@ public class TerrainUnitEnemy : ENEMY
         destroyedObject.transform.SetParent(null);
         destroyedObject.transform.rotation = transform.rotation;
         destroyedObject.SetActive(true);
+        unitBase.gameObject.SetActive(false);
         base.OnDeath();
     }
     
