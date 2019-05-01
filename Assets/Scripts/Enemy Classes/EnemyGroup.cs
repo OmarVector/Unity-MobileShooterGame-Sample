@@ -96,14 +96,18 @@ public class EnemyGroup : MonoBehaviour
             // If our unit is DynamicAir moving game object
             case EnemyType.DynamicTerrainUnit:
             {
-                var unit =
-                    Instantiate(enemyGameObject, tweenPath.tween.PathGetPoint(0), Quaternion.identity) as GameObject;
-                unit.transform.SetParent(gameObject.transform);
-                // By Design : Terrain unity collider's height is set dynamically , and thus we can attach the enemy class to the top of the object . Check TerrainUnitEnemy Class "SetColliderLocation()"
-                enemy = unit.GetComponentInChildren<ENEMY>();
-                enemy.SetEnemyProperties(enemyHealth, enemyDamage, score, dropAmount, false, this);
-                TweenOnFinish.Add(enemy.OnStop);
-                Enemies.Add(unit);
+                for (int i = 0; i < enemySize; ++i)
+                {
+                    var unit =
+                        Instantiate(enemyGameObject, tweenPath.tween.PathGetPoint(0),
+                            Quaternion.identity) as GameObject;
+                    unit.transform.SetParent(gameObject.transform);
+                    // By Design : Terrain unity collider's height is set dynamically , and thus we can attach the enemy class to the top of the object . Check TerrainUnitEnemy Class "SetColliderLocation()"
+                    enemy = unit.GetComponentInChildren<ENEMY>();
+                    enemy.SetEnemyProperties(enemyHealth, enemyDamage, score, dropAmount, false, this);
+                    TweenOnFinish.Add(enemy.OnStop);
+                    Enemies.Add(unit);
+                }
             }
                 break;
 
