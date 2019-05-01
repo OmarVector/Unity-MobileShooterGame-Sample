@@ -784,7 +784,8 @@ GameObject:
   - component: {fileID: 1025722221214032313}
   - component: {fileID: 753336061276880608}
   - component: {fileID: 4109745885471553461}
-  m_Layer: 0
+  - component: {fileID: 7599614967084494314}
+  m_Layer: 11
   m_Name: Player Jet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -834,6 +835,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
+--- !u!65 &7599614967084494314
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025722221213547929}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 24.72, y: 17.22, z: 28.48}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1025722221213547933
 GameObject:
   m_ObjectHideFlags: 0

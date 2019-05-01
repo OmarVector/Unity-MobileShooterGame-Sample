@@ -1,31 +1,43 @@
 fileFormatVersion: 2
-guid: 43964743c934689438db48fdf2325984
+guid: 0eed8a6d3024e1542af1cb9d365260d2
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Fans
+    100000: polySurface21
     100002: //RootNode
-    400000: Fans
+    100004: TankBase_Death
+    100006: TankGun_Death
+    100008: TankRoll_Death_02
+    100010: TankRool_Death_01
+    400000: polySurface21
     400002: //RootNode
-    2100000: Helicopter_Mini_Boss
-    2100002: Holicopter_Fans
-    2300000: Fans
-    2300002: //RootNode
-    3300000: Fans
-    3300002: //RootNode
-    4300000: Holicopter_Mesh
-    4300002: Fans
+    400004: TankBase_Death
+    400006: TankGun_Death
+    400008: TankRoll_Death_02
+    400010: TankRool_Death_01
+    2100000: Tank_mat
+    2300000: TankBase_Death
+    2300002: TankGun_Death
+    2300004: TankRoll_Death_02
+    2300006: TankRool_Death_01
+    3300000: TankBase_Death
+    3300002: TankGun_Death
+    3300004: TankRoll_Death_02
+    3300006: TankRool_Death_01
+    4300000: TankRool_Death_01
+    4300002: TankRoll_Death_02
+    4300004: TankBase_Death
+    4300006: TankGun_Death
+    6400000: TankBase_Death
+    6400002: TankGun_Death
+    6400004: TankRoll_Death_02
+    6400006: TankRool_Death_01
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Helicopter_Mini_Boss
-    second: {fileID: 2100000, guid: 533c29a20667a9544a14faf10c12b194, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Holicopter_Fans
-    second: {fileID: 2100000, guid: f745566628f1455419375e9ee70865af, type: 2}
+      name: Tank_mat
+    second: {fileID: 2100000, guid: 5c32f5a73140a174a8703146af86ed10, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -56,9 +68,9 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 10
-    meshCompression: 3
-    addColliders: 0
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     importVisibility: 0
     importBlendShapes: 0

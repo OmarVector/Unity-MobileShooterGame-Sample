@@ -1,31 +1,46 @@
 fileFormatVersion: 2
-guid: 43964743c934689438db48fdf2325984
+guid: 75271dacff9191647beed8a1d418c711
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Fans
-    100002: //RootNode
-    400000: Fans
-    400002: //RootNode
-    2100000: Helicopter_Mini_Boss
-    2100002: Holicopter_Fans
-    2300000: Fans
-    2300002: //RootNode
-    3300000: Fans
-    3300002: //RootNode
-    4300000: Holicopter_Mesh
-    4300002: Fans
+    100000: polySurface268
+    100002: polySurface279
+    100004: //RootNode
+    100006: Turret_Base3
+    100008: Turret_Gun5
+    100010: Turret_Gun7
+    100012: Turret_Holder1
+    400000: polySurface268
+    400002: polySurface279
+    400004: //RootNode
+    400006: Turret_Base3
+    400008: Turret_Gun5
+    400010: Turret_Gun7
+    400012: Turret_Holder1
+    2100000: Turrent_mat
+    2300000: polySurface268
+    2300002: polySurface279
+    2300004: Turret_Base3
+    2300006: Turret_Holder1
+    3300000: polySurface268
+    3300002: polySurface279
+    3300004: Turret_Base3
+    3300006: Turret_Holder1
+    4300000: Turret_Base3
+    4300002: Turret_Holder1
+    4300004: polySurface279
+    4300006: polySurface268
+    6400000: polySurface268
+    6400002: polySurface279
+    6400004: Turret_Base3
+    6400006: Turret_Holder1
+    2186277476908879412: ImportLogs
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Helicopter_Mini_Boss
-    second: {fileID: 2100000, guid: 533c29a20667a9544a14faf10c12b194, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Holicopter_Fans
-    second: {fileID: 2100000, guid: f745566628f1455419375e9ee70865af, type: 2}
+      name: Turrent_mat
+    second: {fileID: 2100000, guid: a9229b35bf8fa794d955297a8a620a38, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -56,9 +71,9 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 10
+    globalScale: 1
     meshCompression: 3
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     importVisibility: 0
     importBlendShapes: 0

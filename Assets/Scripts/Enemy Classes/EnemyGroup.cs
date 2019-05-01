@@ -55,9 +55,10 @@ public class EnemyGroup : MonoBehaviour
     // enum we going to use to select desired enemy type while building our level.
     public enum EnemyType
     {
-        DynamicUnit, // For objects that moves along the path like tanks, Jets..etc
+        DynamicAirUnit, // For objects that moves along the path like tanks, Jets..etc
+        DynamicTerrainUnit, // For moving object on terrain
         StaticUnit, // For objects that hold their positions, like Turrets.
-        MiniBoss // For MiniBosses . //TODO
+        EliteUnit // For MiniBosses . //TODO
     }
 
     public EnemyType Type;
@@ -73,31 +74,61 @@ public class EnemyGroup : MonoBehaviour
 
         switch (Type)
         {
-            // If our unit is Dynamic moving game object
-            case EnemyType.DynamicUnit:
+            // If our unit is DynamicAir moving game object
+            case EnemyType.DynamicAirUnit:
             {
                 // Loading Enemies and add them to the list.
                 for (int i = 0; i < enemySize; ++i)
                 {
-                    var unit = Instantiate(enemyGameObject, tweenPath.tween.PathGetPoint(0), Quaternion.identity);
+                    var unit =
+                        Instantiate(enemyGameObject, tweenPath.tween.PathGetPoint(0),
+                            Quaternion.identity) as GameObject;
                     unit.transform.SetParent(gameObject.transform);
                     enemy = unit.GetComponent<ENEMY>();
-                    enemy.SetEnemyProperties(enemyHealth, enemyDamage, score, dropAmount, false);
-
+                    enemy.SetEnemyProperties(enemyHealth, enemyDamage, score, dropAmount, false, this);
+                    TweenOnFinish.Add(enemy.OnStop);
                     Enemies.Add(unit);
                 }
 
                 break;
             }
 
+            // If our unit is DynamicAir moving game object
+            case EnemyType.DynamicTerrainUnit:
+            {
+                var unit =
+                    Instantiate(enemyGameObject, tweenPath.tween.PathGetPoint(0), Quaternion.identity) as GameObject;
+                unit.transform.SetParent(gameObject.transform);
+                // By Design : Terrain unity collider's height is set dynamically , and thus we can attach the enemy class to the top of the object . Check TerrainUnitEnemy Class "SetColliderLocation()"
+                enemy = unit.GetComponentInChildren<ENEMY>();
+                enemy.SetEnemyProperties(enemyHealth, enemyDamage, score, dropAmount, false, this);
+                TweenOnFinish.Add(enemy.OnStop);
+                Enemies.Add(unit);
+            }
+                break;
+
             // If our unit is Static game object like turret
             case EnemyType.StaticUnit:
             {
-                var unit = Instantiate(enemyGameObject, transform.position, Quaternion.identity);
-                enemyGameObject.transform.SetParent(gameObject.transform);
-                enemy = enemyGameObject.GetComponentInChildren<ENEMY>();
+                // Usually only one unit .
+                var unit =
+                    Instantiate(enemyGameObject, tweenPath.tween.PathGetPoint(0), Quaternion.identity) as GameObject;
+                unit.transform.SetParent(gameObject.transform);
+                enemy = unit.GetComponentInChildren<ENEMY>();
+                enemy.SetEnemyProperties(enemyHealth, enemyDamage, score, dropAmount, false, this);
 
-                enemy.SetEnemyProperties(enemyHealth, enemyDamage, score, dropAmount, false);
+
+                Destroy(tweenPath);
+                Enemies.Add(unit);
+            }
+                break;
+            
+            case EnemyType.EliteUnit:
+            {
+                var unit = Instantiate(enemyGameObject, tweenPath.tween.PathGetPoint(0), Quaternion.Euler(0,180,0));
+                unit.transform.SetParent(gameObject.transform);
+                enemy = unit.GetComponent<ENEMY>();
+                enemy.SetEnemyProperties(enemyHealth, enemyDamage, score, dropAmount, false, this);
 
                 Destroy(tweenPath);
                 Enemies.Add(unit);
@@ -115,11 +146,19 @@ public class EnemyGroup : MonoBehaviour
         switch (Type)
         {
             // If the enemy is dynamic , StartCoroutine EnableDynamicEnemies.
-            case EnemyType.DynamicUnit:
+            case EnemyType.DynamicAirUnit:
             {
-                StartCoroutine(EnableDynamicEnemies());
+                StartCoroutine(EnableDynamicAirUnit());
                 break;
             }
+
+            case EnemyType.DynamicTerrainUnit:
+            {
+                StartCoroutine(EnableDynamicTerrainUnit());
+                break;
+            }
+
+
             // If the enemy unit is static, Just Set it active.    
             case EnemyType.StaticUnit:
             {
@@ -127,7 +166,7 @@ public class EnemyGroup : MonoBehaviour
                 break;
             }
             // If its a MiniBoss, Just Set it active.
-            case EnemyType.MiniBoss:
+            case EnemyType.EliteUnit:
             {
                 Enemies[0].SetActive(true);
                 break;
@@ -135,18 +174,35 @@ public class EnemyGroup : MonoBehaviour
         }
     }
 
-    private IEnumerator EnableDynamicEnemies()
+    // enable dynamic Enemies
+    private IEnumerator EnableDynamicAirUnit()
     {
+        // enable Rigid Bodies of enemies to follow the path, once it ended we call OnStop method
         for (int i = 0; i < enemySize; ++i)
         {
             Enemies[i].SetActive(true);
             var rd = Enemies[i].GetComponent<Rigidbody>();
-            rd.DOPath(tweenPath.wps.ToArray(), SpeedInSeconds, PathType.CatmullRom);
+            rd.DOPath(tweenPath.wps.ToArray(), SpeedInSeconds, PathType.CatmullRom).OnComplete(TweenOnFinish[i])
+                .SetLookAt(0.01f);
 
             yield return new WaitForSeconds(spaceBetweenEachEnemy);
         }
     }
 
+    private IEnumerator EnableDynamicTerrainUnit()
+    {
+        for (int i = 0; i < enemySize; ++i)
+        {
+            Enemies[i].SetActive(true);
+            Enemies[i].transform.DOPath(tweenPath.wps.ToArray(), SpeedInSeconds, PathType.CatmullRom)
+                .SetOptions(false, AxisConstraint.None, AxisConstraint.None).SetLookAt(0.01f)
+                .OnComplete(TweenOnFinish[i]);
+
+            yield return new WaitForSeconds(spaceBetweenEachEnemy);
+        }
+    }
+
+    // Checking max score Bonus in case we destroyed all enemies in one single group
     public void ScoreBonusCheck()
     {
         EnemyScoreCounter++;

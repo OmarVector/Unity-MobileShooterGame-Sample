@@ -6,21 +6,23 @@ public class ENEMY : MonoBehaviour
 {
     // Enemy Unit Class that hold all properties of the enemy
 
-    private int Health; // Health
-    private int Damage; // Damage that will cause to main player
+    protected int Health; // Health
+    protected int Damage; // Damage that will cause to main player
     private int Score; // Score amount when getting destroyed   
     private int DropAmount; // Number of coins will be dropped
     private bool IsDead; // to check if the enemy died or not.
+    protected EnemyGroup enemyGroup; // Reference to enemyGroup
 
 
     // Using custom public constructor here 
-    public void SetEnemyProperties(int health, int damage, int score, int dropAmount, bool isDead)
+    public void SetEnemyProperties(int health, int damage, int score, int dropAmount, bool isDead, EnemyGroup enemyGrp)
     {
         Health = health;
         Damage = damage;
         Score = score;
         DropAmount = dropAmount;
         IsDead = isDead;
+        enemyGroup = enemyGrp;
     }
 
     // Called when mainplayer do damage to enemy
@@ -35,11 +37,11 @@ public class ENEMY : MonoBehaviour
     }
 
     // Called when enemy get destroyed.
-    public virtual void OnDeath()
+    protected virtual void OnDeath()
     {
         //TODO Adding score Logic.
         //TODO Drops
-        // Checking Group Score
+        enemyGroup.ScoreBonusCheck();
         Destroy(gameObject);
     }
 
