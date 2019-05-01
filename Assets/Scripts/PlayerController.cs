@@ -13,6 +13,9 @@ public class PlayerController : MonoBehaviour
     // Reference to main Camera
     private Camera cam;
     
+    //List of Weapons that will be enabled once the player jet on start position
+   [SerializeField] private List<GameObject> Weapons = new List<GameObject>();
+    
     private void Start()
     {
         enabled = false;
@@ -21,9 +24,17 @@ public class PlayerController : MonoBehaviour
         // Moving the jet to start location then enable the controls .
         transform.DOMove(new Vector3(0,120,-13),2 ).SetEase(Ease.OutQuad).SetUpdate(true).onComplete = delegate
         {
+            // enable player controls
             enabled = true;
             // Once the ship land on the start location, Start DO Animation of the main level.
             transform.parent.GetComponent<DOTweenAnimation>().DOPlay();
+            
+            // enable player weapons
+            for (int i = 0; i < Weapons.Count; ++i)
+            {
+                Weapons[i].SetActive(true);
+            }
+            
         };
     }
 

@@ -51,14 +51,14 @@ public class ShipDataManager : MonoBehaviour
     [HideInInspector] public int LaserAmount;
     [HideInInspector] public int ShieldAmount;
 
-    public static ShipDataManager shipDataManagerManager = null;
+    public static ShipDataManager shipDataManager = null;
 
     // Initializing singletone of the shipDetailManager
     private void Awake()
     {
-        if (shipDataManagerManager == null)
-            shipDataManagerManager = this;
-        else if (shipDataManagerManager != this)
+        if (shipDataManager == null)
+            shipDataManager = this;
+        else if (shipDataManager != this)
             Destroy(gameObject);
 
         DontDestroyOnLoad(gameObject);

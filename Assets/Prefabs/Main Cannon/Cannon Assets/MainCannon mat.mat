@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Main canon particle mat
+  m_Name: MainCannon mat
   m_Shader: {fileID: 4800000, guid: 01def9db82efe334ea41bf0d1fedb37b, type: 3}
   m_ShaderKeywords: _ALPHABLEND_ON _EMISSION
   m_LightmapFlags: 0

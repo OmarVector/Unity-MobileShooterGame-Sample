@@ -68,7 +68,7 @@ public class EnemyGroup : MonoBehaviour
     {
         tweenPath = GetComponent<DOTweenPath>();
         tweenPath.easeType = Ease.Linear;
-        Enemy enemy;
+        ENEMY enemy;
 
 
         switch (Type)
@@ -81,7 +81,7 @@ public class EnemyGroup : MonoBehaviour
                 {
                     var unit = Instantiate(enemyGameObject, tweenPath.tween.PathGetPoint(0), Quaternion.identity);
                     unit.transform.SetParent(gameObject.transform);
-                    enemy = unit.GetComponent<Enemy>();
+                    enemy = unit.GetComponent<ENEMY>();
                     enemy.SetEnemyProperties(enemyHealth, enemyDamage, score, dropAmount, false);
 
                     Enemies.Add(unit);
@@ -95,7 +95,7 @@ public class EnemyGroup : MonoBehaviour
             {
                 var unit = Instantiate(enemyGameObject, transform.position, Quaternion.identity);
                 enemyGameObject.transform.SetParent(gameObject.transform);
-                enemy = enemyGameObject.GetComponentInChildren<Enemy>();
+                enemy = enemyGameObject.GetComponentInChildren<ENEMY>();
 
                 enemy.SetEnemyProperties(enemyHealth, enemyDamage, score, dropAmount, false);
 
