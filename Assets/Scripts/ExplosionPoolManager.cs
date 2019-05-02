@@ -86,7 +86,9 @@ public class ExplosionPoolManager : MonoBehaviour
         {
             if (!TerrainUnitParticles[i].activeInHierarchy)
             {
-                TerrainUnitParticles[i].transform.position = trans.position;
+                var pos = trans.position;
+                pos.y += 15;
+                TerrainUnitParticles[i].transform.position = pos;
                 TerrainUnitParticles[i].SetActive(true);
                 TerrainUnitParticles[i].GetComponent<ParticleSystem>().Play();
               
@@ -99,6 +101,6 @@ public class ExplosionPoolManager : MonoBehaviour
     public void ReturnEnemyToPool(GameObject go)
     {
         go.SetActive(false);
-        go.transform.position = transform.position;
+      //  go.transform.position = transform.position;
     }
 }

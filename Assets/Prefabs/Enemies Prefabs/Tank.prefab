@@ -368,7 +368,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.669771, y: 6.19892, z: 6.19892}
+  m_Size: {x: 3.28, y: 3.72, z: 4.97}
   m_Center: {x: -0.0000038146973, y: -0.00000023841858, z: 0}
 --- !u!54 &273482297422047198
 Rigidbody:
@@ -476,7 +476,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.66977, y: 6.19892, z: 6.19892}
+  m_Size: {x: 2.94, y: 4.65, z: 4.8}
   m_Center: {x: -0.0000009536743, y: -0.00000023841858, z: 0}
 --- !u!54 &1212165420007805761
 Rigidbody:
@@ -584,8 +584,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 26.874796, y: 13.682028, z: 43.60286}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 26.874796, y: 3.07, z: 43.60286}
+  m_Center: {x: 0, y: 2, z: 0}
 --- !u!54 &524325089039983208
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -613,8 +613,8 @@ GameObject:
   - component: {fileID: 6794447990708868651}
   - component: {fileID: 6794447990710195727}
   - component: {fileID: 6794447990711162063}
-  - component: {fileID: 3184323890967388189}
   - component: {fileID: 8287263105033708404}
+  - component: {fileID: 4026107669060610580}
   m_Layer: 0
   m_Name: Tank Gun
   m_TagString: Untagged
@@ -681,7 +681,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &3184323890967388189
+--- !u!65 &8287263105033708404
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6794447990709160459}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 11.991274, y: 6.77, z: 25.831415}
+  m_Center: {x: -0.00000047683713, y: 1.1202763, z: 6.9200716}
+--- !u!54 &4026107669060610580
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -697,19 +710,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &8287263105033708404
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6794447990709160459}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 11.991274, y: 14.06215, z: 25.831415}
-  m_Center: {x: -0.00000047683713, y: 1.1202763, z: 6.9200716}
 --- !u!1 &6794447990709160463
 GameObject:
   m_ObjectHideFlags: 0

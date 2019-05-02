@@ -28,10 +28,10 @@ public class EliteUnitController : MonoBehaviour
     private void OnEnable()
     {
       
-        rigidBody.DOMoveZ(transform.position.z - 10, 4).SetEase(Ease.OutQuad).onComplete = delegate
+        rigidBody.DOMoveZ(transform.position.z - 30, 3).SetEase(Ease.OutQuad).onComplete = delegate
         {
             transform.SetParent(playerPath.transform);
-            Invoke("OnTimeOut",3f);
+            Invoke("OnTimeOut",15f);
         };
     }
 
@@ -41,7 +41,7 @@ public class EliteUnitController : MonoBehaviour
         transform.SetParent(null);
         var randX = Random.Range(100, 200);
         var randZ = Random.Range(100, 200);
-        rigidBody.DOMove(transform.position + new Vector3(randX, 0, randZ), 6).onComplete = delegate
+        rigidBody.DOMove(transform.position + new Vector3(randX, 0, randZ), 10).onComplete = delegate
         {
             gameObject.SetActive(false);
         };
