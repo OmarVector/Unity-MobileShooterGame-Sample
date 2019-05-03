@@ -91,14 +91,14 @@ public class PlayerController : MonoBehaviour
 
             //assign the 'newTimeScale' to the current 'timeScale'  
             Time.timeScale = 1;  
-          //  Time.fixedDeltaTime = Time.timeScale * 0.02f;
+            Time.fixedDeltaTime = Time.timeScale * 0.02f;
            
         
         }
         else
         {
             Time.timeScale = 0.2f;  
-          //  Time.fixedDeltaTime = Time.timeScale * 0.02f;
+            Time.fixedDeltaTime = Time.timeScale * 0.02f;
         }
 
 #endif

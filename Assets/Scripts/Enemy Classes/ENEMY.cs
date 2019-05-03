@@ -42,11 +42,31 @@ public class ENEMY : MonoBehaviour
         //TODO Adding score Logic.
         //TODO Drops
         enemyGroup.ScoreBonusCheck();
-        Destroy(gameObject);
+        RocketRadar.rocketRadar.EnemyTransform.Remove(transform);
+        //Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 
     // Called when the animation of TweenPath ended.
     public virtual void OnStop()
     {
+    }
+    
+    private void OnTriggerEnter(Collider other)
+    {
+        // once the enemy target enter the Radar trigger, it added it's Transform to Radar target list.
+        RocketRadar.rocketRadar.EnemyTransform.Add(transform);
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        // Once it leave the radar trigger, it remove itself from enemy target list
+        RocketRadar.rocketRadar.EnemyTransform.Remove(transform);
+    }
+
+    private void OnDisable()
+    {
+        // Once it become disabled, it remove itself from enemy target list
+        RocketRadar.rocketRadar.EnemyTransform.Remove(transform);
     }
 }

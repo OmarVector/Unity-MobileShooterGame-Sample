@@ -53,9 +53,12 @@ public class EliteEnemy : ENEMY
     private void OnCollisionEnter(Collision collision)
     {
         var x = collision.gameObject.GetComponent<MainplayerClass>();
-        if(x!=null)
+        if (x != null)
+        {
             x.RecieveDamage(Damage);
+            OnDeath();
+        }
         
-        OnDeath();
+       
     }
 }

@@ -186,7 +186,7 @@ public class EnemyGroup : MonoBehaviour
         {
             Enemies[i].SetActive(true);
             var rd = Enemies[i].GetComponent<Rigidbody>();
-            rd.DOPath(tweenPath.wps.ToArray(), SpeedInSeconds, PathType.CatmullRom).OnComplete(TweenOnFinish[i])
+            rd.DOPath(tweenPath.wps.ToArray(), SpeedInSeconds, PathType.CatmullRom).SetUpdate(UpdateType.Fixed).OnComplete(TweenOnFinish[i])
                 .SetLookAt(0.01f);
 
             yield return new WaitForSeconds(spaceBetweenEachEnemy);
@@ -213,7 +213,7 @@ public class EnemyGroup : MonoBehaviour
         if (EnemyScoreCounter == enemySize)
         {
             Debug.Log("MAX SCORE"); //TODO Adding mini celebration
-            Destroy(gameObject);
+           gameObject.SetActive(false);
         }
     }
 }

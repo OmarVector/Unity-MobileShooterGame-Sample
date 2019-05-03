@@ -23,6 +23,6 @@ public class WingCannonWeapon : WEAPON
     {
         fireRate += powerIncrease;
         GetComponent<ParticleSystem>().emissionRate = fireRate;
-        Debug.Log("<b><color=Green> Main Cannon Fire Rate = </color></b>");
+        Debug.Log("<b><color=Green> Wing Cannon Fire Rate = </color></b>");
     }
 }
