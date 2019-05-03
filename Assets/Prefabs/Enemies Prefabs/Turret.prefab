@@ -460,7 +460,7 @@ GameObject:
   - component: {fileID: 89796578527357037}
   - component: {fileID: 1246585942091835422}
   - component: {fileID: 6189100899235374033}
-  - component: {fileID: 4653981966833667229}
+  - component: {fileID: 7691985761291855896}
   m_Layer: 9
   m_Name: Terrain Unit
   m_TagString: Untagged
@@ -513,8 +513,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &4653981966833667229
-BoxCollider:
+--- !u!135 &7691985761291855896
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -524,8 +524,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 12.19, y: 4.4, z: 6.6}
-  m_Center: {x: 0, y: 0, z: 8.27}
+  m_Radius: 6.07
+  m_Center: {x: 0, y: 0, z: 5.59}
 --- !u!1 &3731979401294008867
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,7 +619,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8858728728881994390
 Transform:
   m_ObjectHideFlags: 0
