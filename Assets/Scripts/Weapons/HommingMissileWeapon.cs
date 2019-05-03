@@ -9,7 +9,7 @@ public class HommingMissileWeapon : WEAPON
     protected override void Start()
     {
         // Setting damage value from current RocketLevel from ShipDataManager , Its hardcoded for now .
-        damage = (ShipDataManager.shipDataManager.RocketLevel * 5) + BASEDAMAGE;
+        power = (ShipDataManager.shipDataManager.RocketLevel * 5) + BASEDAMAGE;
 
         // setting power increment , different from weapon to weapon .
         powerIncrease = 0.1f;
@@ -26,7 +26,7 @@ public class HommingMissileWeapon : WEAPON
     {
         var enemy = other.gameObject.GetComponent<ENEMY>();
         if(enemy!=null)
-            enemy.ReceiveDamage(damage);
+            enemy.ReceiveDamage(power);
         
         Destroy(gameObject);
     }

@@ -9,7 +9,7 @@ public class WingCannonWeapon : WEAPON
     protected override void Start()
     {
         // Setting damage value from current WingCannonLevel from ShipDataManager
-        damage = (ShipDataManager.shipDataManager.WingCannonLevel * 10) + BASEDAMAGE;
+        power = (ShipDataManager.shipDataManager.WingCannonLevel * 10) + BASEDAMAGE;
         
         //playing the particle system of the main cannon 
         GetComponent<ParticleSystem>().Play();

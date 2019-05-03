@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerController : MonoBehaviour
 {
@@ -42,6 +43,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+            return;
         // Setting Up Controllers for Jet to follow player fingers 
 #if UNITY_ANDROID
         if (Input.touchCount > 0)

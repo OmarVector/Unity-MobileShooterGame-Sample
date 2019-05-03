@@ -5,8 +5,8 @@ public class WEAPON : MonoBehaviour
 {
     // class that hold all common weapon properties
 
-    // Weapon Damage
-    protected int damage;
+    // Weapon Power
+    protected int power;
     // Weapon FireRate
     protected float fireRate;
     // Weapon particle Size
@@ -30,7 +30,7 @@ public class WEAPON : MonoBehaviour
     {
         var enemy = go.GetComponent<ENEMY>();
         if(enemy!=null)
-            enemy.ReceiveDamage(damage);
+            enemy.ReceiveDamage(power);
     }
 
     // its virtual bec some weapons will not depends on particles emission rates like Rockets.

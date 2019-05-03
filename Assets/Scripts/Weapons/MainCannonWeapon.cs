@@ -11,7 +11,7 @@ public class MainCannonWeapon : WEAPON
     protected override void Start()
     {
         // Setting damage value from current MainCannonLevel from ShipDataManager
-        damage = (ShipDataManager.shipDataManager.MainCannonLevel * 10) + BASEDAMAGE;
+        power = (ShipDataManager.shipDataManager.MainCannonLevel * 10) + BASEDAMAGE;
         
         //playing the particle system of the main cannon 
         GetComponent<ParticleSystem>().Play();

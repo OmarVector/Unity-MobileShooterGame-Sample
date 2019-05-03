@@ -109,8 +109,8 @@ public class ShipDataManager : MonoBehaviour
             ShieldLevel = 50; // == 0;
 
             CoinsAmount = 9999999; // == 0;
-            LaserAmount = 9999999; // == 0;
-            ShieldAmount = 999999; // == 0;
+            LaserAmount = 100; // == 0;
+            ShieldAmount = 100; // == 0;
         }
     }
 
