@@ -1151,7 +1151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b81ac72878bb99f4d8e5c148ae30524f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HommingMissle: {fileID: 6893731949959810399, guid: 821cfcb303516c24eb793549458fddf0,
+  HommingMissile: {fileID: 6893731949959810399, guid: 821cfcb303516c24eb793549458fddf0,
     type: 3}
   LRocket: {fileID: 4127196529718381488}
   RRocket: {fileID: 5347313331903404506}
