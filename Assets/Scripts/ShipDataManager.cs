@@ -22,7 +22,7 @@ public class ShipDataManager : MonoBehaviour
         public int RocketLevel;
 
         // Twin Laser Power
-        public int TwinLaserLevel;
+        public int LaserLevel;
 
         // Magnet Level Power
         public int MagnetLevel;
@@ -38,12 +38,13 @@ public class ShipDataManager : MonoBehaviour
 
         // Collected amount of Shields
         public int ShieldAmount;
+
     }
 
     [HideInInspector] public int MainCannonLevel;
     [HideInInspector] public int WingCannonLevel;
     [HideInInspector] public int RocketLevel;
-    [HideInInspector] public int TwinLaserLevel;
+    [HideInInspector] public int LaserLevel;
     [HideInInspector] public int MagnetLevel;
     [HideInInspector] public int ShieldLevel;
 
@@ -63,6 +64,7 @@ public class ShipDataManager : MonoBehaviour
 
         DontDestroyOnLoad(gameObject);
 
+        
         LoadShipData();
     }
 
@@ -71,6 +73,9 @@ public class ShipDataManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.D))
         {
             PrintShipDetails();
+            ResetShipLevelData();
+            LoadShipData();
+          
         }
     }
 
@@ -87,7 +92,7 @@ public class ShipDataManager : MonoBehaviour
             MainCannonLevel = shipDetails.MainCannonLevel;
             WingCannonLevel = shipDetails.WingCannonLevel;
             RocketLevel = shipDetails.RocketLevel;
-            TwinLaserLevel = shipDetails.TwinLaserLevel;
+            LaserLevel = shipDetails.LaserLevel;
             MagnetLevel = shipDetails.MagnetLevel;
             ShieldLevel = shipDetails.ShieldLevel;
 
@@ -100,11 +105,11 @@ public class ShipDataManager : MonoBehaviour
         else
         {
             // I've bumped up all the values for this demo while the default values are commented
-
+            Debug.Log("HELLo");
             MainCannonLevel = 70; // == 0
             WingCannonLevel = 60; // == 0
             RocketLevel = 50; // == 0;
-            TwinLaserLevel = 50; // == 0;
+            LaserLevel = 50; // == 0;
             MagnetLevel = 50; // == 0;
             ShieldLevel = 50; // == 0;
 
@@ -124,7 +129,7 @@ public class ShipDataManager : MonoBehaviour
         shipDetails.MainCannonLevel = MainCannonLevel;
         shipDetails.RocketLevel = RocketLevel;
         shipDetails.WingCannonLevel = WingCannonLevel;
-        shipDetails.TwinLaserLevel = TwinLaserLevel;
+        shipDetails.LaserLevel = LaserLevel;
         shipDetails.MagnetLevel = MagnetLevel;
         shipDetails.ShieldLevel = ShieldLevel;
 
@@ -137,6 +142,31 @@ public class ShipDataManager : MonoBehaviour
         file.Close();
     }
 
+    // Reset ship data
+    public void ResetShipLevelData()
+    {
+        BinaryFormatter bf = new BinaryFormatter();
+        FileStream file = File.Open(Application.persistentDataPath + "/ShipData.dat", FileMode.OpenOrCreate);
+
+        ShipDetails shipDetails = new ShipDetails();
+        shipDetails.MainCannonLevel = 70;
+        shipDetails.RocketLevel = 60;
+        shipDetails.WingCannonLevel = 50;
+        shipDetails.LaserLevel = 50;
+        shipDetails.MagnetLevel = 50;
+        shipDetails.ShieldLevel = 50;
+
+
+        shipDetails.CoinsAmount = 999999;
+        shipDetails.LaserAmount = 100;
+        shipDetails.ShieldAmount = 100;
+
+        bf.Serialize(file, shipDetails);
+        file.Close();
+        
+      
+    }
+    
     private void OnApplicationQuit()
     {
         SaveShipLevelsData();
@@ -147,7 +177,7 @@ public class ShipDataManager : MonoBehaviour
         Debug.Log("<b><color=teal> Main Cannon Level      : " + MainCannonLevel + "</color></b>");
         Debug.Log("<b><color=teal> Rockets Level          : " + RocketLevel + "</color></b>");
         Debug.Log("<b><color=teal> Wing Cannon Level      : " + WingCannonLevel + "</color></b>");
-        Debug.Log("<b><color=teal> Twin Laser Level       : " + TwinLaserLevel + "</color></b>");
+        Debug.Log("<b><color=teal> Twin Laser Level       : " + LaserLevel + "</color></b>");
         Debug.Log("<b><color=teal> Magnet Level           : " + MagnetLevel + "</color></b>");
         Debug.Log("<b><color=teal> Shield Level           : " + ShieldLevel + "</color></b>");
   

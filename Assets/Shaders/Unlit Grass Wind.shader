@@ -1,6 +1,6 @@
 // Made with Amplify Shader Editor
 // Available at the Unity Asset Store - http://u3d.as/y3X 
-Shader "Unlit Wind Shader"
+Shader "Custom Unlit Shaders/Unlit Wind Shader"
 {
 	Properties
 	{
@@ -63,7 +63,7 @@ Shader "Unlit Wind Shader"
 }
 /*ASEBEGIN
 Version=16100
-264;6.4;1081;789;1176.89;514.0307;1.6;True;False
+189.6;6.4;1081;790;1372.089;502.0307;1.6;True;False
 Node;AmplifyShaderEditor.PannerNode;8;-851.525,126.5953;Float;False;3;0;FLOAT2;0,0;False;2;FLOAT2;0.4,0.5;False;1;FLOAT;5;False;1;FLOAT2;0
 Node;AmplifyShaderEditor.Vector2Node;13;-783.525,275.5953;Float;False;Property;_WindPower;Wind Power;2;0;Create;True;0;0;False;0;0.01,0.02;0,0;0;3;FLOAT2;0;FLOAT;1;FLOAT;2
 Node;AmplifyShaderEditor.SinOpNode;9;-629.525,132.5953;Float;False;1;0;FLOAT2;0,0;False;1;FLOAT2;0
@@ -75,7 +75,7 @@ Node;AmplifyShaderEditor.DecodeLightmapHlpNode;1;-240.6871,-183.6403;Float;False
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;23;-307.0234,255.4202;Float;False;2;2;0;FLOAT2;0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0
 Node;AmplifyShaderEditor.WorldPosInputsNode;21;-577.1074,462.8333;Float;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;32;54.21361,-285.2866;Float;False;3;3;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;2;FLOAT3;0,0,0;False;1;COLOR;0
-Node;AmplifyShaderEditor.StandardSurfaceOutputNode;40;189.302,-45.66235;Float;False;True;0;Float;ASEMaterialInspector;0;0;Unlit;Unlit Wind Shader;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;Front;0;False;-1;0;False;-1;False;0;False;-1;0;False;-1;False;0;Custom;0.5;True;True;0;True;TransparentCutout;;Geometry;All;True;True;True;True;True;True;True;True;True;True;True;True;True;True;True;True;True;0;False;-1;False;0;False;-1;255;False;-1;255;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;False;2;15;10;25;False;0.5;True;0;0;False;-1;0;False;-1;0;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;0;0,0,0,0;VertexOffset;True;False;Cylindrical;False;Relative;0;;0;-1;-1;-1;0;False;0;0;False;-1;-1;0;False;-1;0;0;0;15;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT3;0,0,0;False;3;FLOAT;0;False;4;FLOAT;0;False;6;FLOAT3;0,0,0;False;7;FLOAT3;0,0,0;False;8;FLOAT;0;False;9;FLOAT;0;False;10;FLOAT;0;False;13;FLOAT3;0,0,0;False;11;FLOAT3;0,0,0;False;12;FLOAT3;0,0,0;False;14;FLOAT4;0,0,0,0;False;15;FLOAT3;0,0,0;False;0
+Node;AmplifyShaderEditor.StandardSurfaceOutputNode;40;189.302,-45.66235;Float;False;True;0;Float;ASEMaterialInspector;0;0;Unlit;Custom Unlit Shaders/Unlit Wind Shader;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;Front;0;False;-1;0;False;-1;False;0;False;-1;0;False;-1;False;0;Custom;0.5;True;True;0;True;TransparentCutout;;Geometry;All;True;True;True;True;True;True;True;True;True;True;True;True;True;True;True;True;True;0;False;-1;False;0;False;-1;255;False;-1;255;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;False;2;15;10;25;False;0.5;True;0;0;False;-1;0;False;-1;0;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;0;0,0,0,0;VertexOffset;True;False;Cylindrical;False;Relative;0;;0;-1;-1;-1;0;False;0;0;False;-1;-1;0;False;-1;0;0;0;15;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT3;0,0,0;False;3;FLOAT;0;False;4;FLOAT;0;False;6;FLOAT3;0,0,0;False;7;FLOAT3;0,0,0;False;8;FLOAT;0;False;9;FLOAT;0;False;10;FLOAT;0;False;13;FLOAT3;0,0,0;False;11;FLOAT3;0,0,0;False;12;FLOAT3;0,0,0;False;14;FLOAT4;0,0,0,0;False;15;FLOAT3;0,0,0;False;0
 WireConnection;9;0;8;0
 WireConnection;11;0;9;0
 WireConnection;11;1;13;0
@@ -89,4 +89,4 @@ WireConnection;40;2;32;0
 WireConnection;40;10;7;4
 WireConnection;40;11;23;0
 ASEEND*/
-//CHKSM=5C5CD5D390E8B44E7ACBFF0DA8CEF106BBE45CF6
+//CHKSM=A154CED0A1E45FBE75EA42F1833F9B4A550D4F17

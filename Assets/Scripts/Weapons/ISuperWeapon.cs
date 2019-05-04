@@ -1,5 +1,6 @@
 ﻿
 public interface ISuperWeapon
 {
-   void EnableSuperWeapon();
+   void ActivateSuperWeapon();
+   void DeactivateSuperWeapon();
 }

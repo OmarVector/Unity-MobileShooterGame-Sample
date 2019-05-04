@@ -6,7 +6,7 @@ using UnityEngine;
 public class AirUnitEnemy : ENEMY
 {
     // player air explosion particles when air unit get destroyed.
-    protected override void OnDeath()
+    public override void OnDeath()
     {
         ExplosionPoolManager.explosionPoolManager.PlayAirParticle(gameObject.transform);
         base.OnDeath();

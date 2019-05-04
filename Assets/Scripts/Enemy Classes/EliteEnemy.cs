@@ -43,7 +43,7 @@ public class EliteEnemy : ENEMY
     }
 
     // called when mini boss get destroyed
-    protected override void OnDeath()
+    public override void OnDeath()
     {
         ExplosionPoolManager.explosionPoolManager.PlayTerrainParticles(transform);
         base.OnDeath();

@@ -37,7 +37,7 @@ public class ENEMY : MonoBehaviour
     }
 
     // Called when enemy get destroyed.
-    protected virtual void OnDeath()
+    public virtual void OnDeath()
     {
         //TODO Adding score Logic.
         //TODO Drops

@@ -1,36 +1,52 @@
 ﻿using UnityEngine;
 
+// Shield class 
 public class Shield : WEAPON, ISuperWeapon
 {
-    // Default time in sec for shield 
-    private static int BASETIME = 20;
+    // Default constant parameter for shield 
+    private const int BASEPOWER = 10;
 
+    // active time length
     private float time;
-    // Start is called before the first frame update
+
+    [SerializeField] private SuperWeaponCanvasController superWeaponCanvas;
+
+    // calculating active time length for the shield
     private void Awake()
     {
-        power = (ShipDataManager.shipDataManager.RocketLevel) + BASETIME;
+        power = (ShipDataManager.shipDataManager.RocketLevel) + BASEPOWER;
         time = power / 10;
     }
 
+    // once it collides with enemies it crash them
     private void OnCollisionEnter(Collision other)
     {
         var enemy = other.gameObject.GetComponent<ENEMY>();
-        if(enemy!=null)
-            enemy.ReceiveDamage(power*100);
+        if (enemy != null)
+            enemy.OnDeath();
     }
 
-    public void EnableSuperWeapon()
+    // interface method to be called when we want to enable the shield.
+    public void ActivateSuperWeapon()
     {
         gameObject.SetActive(true);
     }
 
+    // On enable
     private void OnEnable()
     {
-        Invoke("ShieldShutdown",time);
+        // setting when the shield will be deactivated 
+        Invoke("DeactivateSuperWeapon", time);
+        // decreasing amount of shield count by 1
+        ShipDataManager.shipDataManager.ShieldAmount--;
+        // saving data . 
+        ShipDataManager.shipDataManager.SaveShipLevelsData();
+        // calling disabled function on SuperWeaponCanvas.
+        superWeaponCanvas.Deactivate();
     }
 
-    private void ShieldShutdown()
+    // Deactivating Shield
+    public void DeactivateSuperWeapon()
     {
         gameObject.SetActive(false);
     }

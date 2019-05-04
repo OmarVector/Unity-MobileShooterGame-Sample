@@ -9,82 +9,126 @@ public class PlayerController : MonoBehaviour
 {
     // Storing player finger position
     private Vector3 fingerPos;
+
     // Storing Player jet position
     private Vector3 playerPos;
+
     // Reference to main Camera
     private Camera cam;
-    
+
     //List of Weapons that will be enabled once the player jet on start position
-   [SerializeField] private List<GameObject> Weapons = new List<GameObject>();
-    
+    [SerializeField] private List<GameObject> Weapons = new List<GameObject>();
+
+    // Enable a small menu when player left his fingers from the screen to use super weapons.
+    [SerializeField] private SuperWeaponCanvasController superWeaponCanvasController;
+
+    private bool isSuperMenu = false;
+
     private void Start()
     {
         enabled = false;
         cam = Camera.main;
-      
+        Time.timeScale = 1.0f;
         // Moving the jet to start location then enable the controls .
-        transform.DOMove(new Vector3(0,120,-13),2 ).SetEase(Ease.OutQuad).SetUpdate(true).onComplete = delegate
+        transform.DOMove(new Vector3(0, 120, -13), 2).SetEase(Ease.OutQuad).SetUpdate(true).onComplete = delegate
         {
             // enable player controls
-            enabled = true;
+            StartCoroutine(Wait(1));
             // Once the ship land on the start location, Start DO Animation of the main level.
             transform.parent.GetComponent<DOTweenAnimation>().DOPlay();
-            
-            // enable player weapons
-            for (int i = 0; i < Weapons.Count; ++i)
-            {
-                Weapons[i].SetActive(true);
-            }
+            enabled = true;
+           
             
         };
+    }
+
+    public IEnumerator Wait(float timeToWait)
+    {
+        yield return new WaitForSeconds(timeToWait);
+        
+        // enable player weapons
+        for (int i = 0; i < Weapons.Count; ++i)
+        {
+            Weapons[i].SetActive(true);
+        }
+    }
+
+    public IEnumerator WaitToEnableCanvasAgain(float timeToWait)
+    {
+        yield return new WaitForSeconds(timeToWait);
+       if (isSuperMenu)
+            isSuperMenu = false;
     }
 
 
     // Update is called once per frame
     void Update()
     {
-        if (EventSystem.current.IsPointerOverGameObject())
-            return;
+      
         // Setting Up Controllers for Jet to follow player fingers 
 #if UNITY_ANDROID
         if (Input.touchCount > 0)
         {
             //
-            var camerapos = cam.transform.position; 
-            playerPos = transform.position; 
-           
+            if (EventSystem.current.IsPointerOverGameObject(Input.GetTouch(0).fingerId))
+                return;
+            
+            var camerapos = cam.transform.position;
+            playerPos = transform.position;
+
             var normalized = (camerapos - playerPos).normalized;
 
             var unitVector = (playerPos.y) / normalized.y;
 
 
-            fingerPos =cam.ScreenToWorldPoint(new Vector3(Input.GetTouch(0).position.x,
+            fingerPos = cam.ScreenToWorldPoint(new Vector3(Input.GetTouch(0).position.x,
                 Input.GetTouch(0).position.y, unitVector));
-            
+
             fingerPos.y = 120f;
             fingerPos.z += 1;
 
             transform.DOMove(fingerPos, 0.3f);
-            
+
             Time.timeScale = 1.0f;
             Time.fixedDeltaTime = Time.timeScale * 0.02f;
+
+
+            if (isSuperMenu)
+            {
+                superWeaponCanvasController.Deactivate(); // it will be called once so no problem
+                isSuperMenu = false;
+            }
         }
         else
         {
-            Time.timeScale = 0.2f;
-            Time.fixedDeltaTime = Time.timeScale * 0.02f;
+            // TODO
+            // this if will be removed from build , since this is still called inside the editor.
+            if (!Application.isEditor)
+           {
+                Time.timeScale = 0.2f;
+                Time.fixedDeltaTime = Time.timeScale * 0.02f;
+
+                if (!isSuperMenu)
+                {
+                    superWeaponCanvasController.Activate();
+                    isSuperMenu = true;
+                }
+           }
         }
 #endif
 
 #if UNITY_EDITOR
         if (Input.GetMouseButton(0))
         {
+            if (EventSystem.current.IsPointerOverGameObject())
+                return;
+            
             var camerapos = cam.transform.position;
 
             playerPos = transform.position; //A
             var normalized = (camerapos - playerPos).normalized;
 
-            float unitVector =(playerPos.y) / normalized.y;
+            float unitVector = (playerPos.y) / normalized.y;
 
             fingerPos = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,
                 Input.mousePosition.y, unitVector));
@@ -93,15 +137,26 @@ public class PlayerController : MonoBehaviour
             transform.DOMove(fingerPos, 0.3f);
 
             //assign the 'newTimeScale' to the current 'timeScale'  
-            Time.timeScale = 1;  
+            Time.timeScale = 1;
             Time.fixedDeltaTime = Time.timeScale * 0.02f;
-           
-        
+
+            if (isSuperMenu)
+            {
+                superWeaponCanvasController.Deactivate();
+                // it will be called once so no problem
+                isSuperMenu = false;
+            }
         }
         else
         {
-            Time.timeScale = 0.2f;  
+            Time.timeScale = 0.2f;
             Time.fixedDeltaTime = Time.timeScale * 0.02f;
+
+            if (!isSuperMenu)
+            {
+                superWeaponCanvasController.Activate();
+                isSuperMenu = true;
+            }
         }
 
 #endif

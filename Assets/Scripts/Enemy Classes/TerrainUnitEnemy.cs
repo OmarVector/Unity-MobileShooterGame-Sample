@@ -64,7 +64,7 @@ public class TerrainUnitEnemy : ENEMY
     }
 
     // By Design, terrain unit has parents unlike air unit + a destroyed version , so we control that here.
-    protected override void OnDeath()
+    public override void OnDeath()
     {
         // play particles explosion upon destorying
         ExplosionPoolManager.explosionPoolManager.PlayTerrainParticles(unitBase);
