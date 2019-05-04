@@ -7,7 +7,7 @@ public class TerrainUnitEnemy : ENEMY
     // A damaged version of the Enemy unit to be rendered once the object get destroyed.
     [SerializeField] private GameObject destroyedObject;
     // Reference to rigid body of the unit
-    [SerializeField] private Rigidbody rigidBody;
+   // [SerializeField] private Rigidbody rigidBody;
     // Reference to camera transform, will be used beside to unitBase transform to set the collider
     private Transform camTransform;
     // Reference to Player Transform
@@ -82,6 +82,5 @@ public class TerrainUnitEnemy : ENEMY
     public override void OnStop()
     {
         gameObject.transform.parent.gameObject.SetActive(false);
-        
     }
 }

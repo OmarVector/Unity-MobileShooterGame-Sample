@@ -11,9 +11,10 @@ public class ENEMY : MonoBehaviour
     private int Score; // Score amount when getting destroyed   
     private int DropAmount; // Number of coins will be dropped
     private bool IsDead; // to check if the enemy died or not.
-    protected EnemyGroup enemyGroup; // Reference to enemyGroup
+    private EnemyGroup enemyGroup; // Reference to enemyGroup
 
-
+    [SerializeField] private EnemyWeaponController weapon; // Reference to weapon attached if any
+    
     // Using custom public constructor here 
     public void SetEnemyProperties(int health, int damage, int score, int dropAmount, bool isDead, EnemyGroup enemyGrp)
     {
@@ -23,6 +24,10 @@ public class ENEMY : MonoBehaviour
         DropAmount = dropAmount;
         IsDead = isDead;
         enemyGroup = enemyGrp;
+
+        // not all units have a weapon, //TODO developing better design to avoid allocating null object for units without a weapon.
+        if (weapon)
+            weapon.damage = Damage;
     }
 
     // Called when mainplayer do damage to enemy
@@ -42,8 +47,9 @@ public class ENEMY : MonoBehaviour
         //TODO Adding score Logic.
         //TODO Drops
         enemyGroup.ScoreBonusCheck();
+        // removing enemy from radar list
         RocketRadar.rocketRadar.EnemyTransform.Remove(transform);
-        //Destroy(gameObject);
+
         gameObject.SetActive(false);
     }
 
@@ -51,7 +57,7 @@ public class ENEMY : MonoBehaviour
     public virtual void OnStop()
     {
     }
-    
+
     private void OnTriggerEnter(Collider other)
     {
         // once the enemy target enter the Radar trigger, it added it's Transform to Radar target list.
@@ -68,5 +74,9 @@ public class ENEMY : MonoBehaviour
     {
         // Once it become disabled, it remove itself from enemy target list
         RocketRadar.rocketRadar.EnemyTransform.Remove(transform);
+        // Culling any attached weapons
+        if (weapon)
+            weapon.Cull();
     }
+   
 }
