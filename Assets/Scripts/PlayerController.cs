@@ -85,7 +85,7 @@ public class PlayerController : MonoBehaviour
                 Input.GetTouch(0).position.y, unitVector));
 
             fingerPos.y = 120f;
-            fingerPos.z += 1;
+            fingerPos.z += 5;
 
             transform.DOMove(fingerPos, 0.3f);
 
@@ -133,7 +133,7 @@ public class PlayerController : MonoBehaviour
             fingerPos = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,
                 Input.mousePosition.y, unitVector));
             fingerPos.y = 120;
-            fingerPos.z += 1;
+            fingerPos.z += 5;
             transform.DOMove(fingerPos, 0.3f);
 
             //assign the 'newTimeScale' to the current 'timeScale'  

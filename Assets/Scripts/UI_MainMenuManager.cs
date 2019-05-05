@@ -15,6 +15,7 @@ public class UI_MainMenuManager : MonoBehaviour
    // HardCoded Loading Level 01
    public void LoadLevel()
    {
+      Time.timeScale = 1;
       // Start button scaled to Zero then disabled.
       StartButton.DOScale(0, 0.3f).onComplete = delegate
       {

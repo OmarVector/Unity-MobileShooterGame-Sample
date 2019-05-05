@@ -1,11 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
 
 public class MainplayerClass : MonoBehaviour
 {
-    [SerializeField] private int health;
+    [SerializeField] private GameObject ship;
+   public int health;
 
    public void RecieveDamage(int damage)
     {
@@ -16,12 +14,9 @@ public class MainplayerClass : MonoBehaviour
 
     void OnDeath()
     {
-        Scene scene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(scene.name);
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log(other.gameObject);
+        ScoreAndDropsManager.scoreAndDropsManager.LevelFinished("LOSER");
+        ExplosionPoolManager.explosionPoolManager.PlayTerrainParticles(transform);
+        ship.SetActive(false);
+        
     }
 }

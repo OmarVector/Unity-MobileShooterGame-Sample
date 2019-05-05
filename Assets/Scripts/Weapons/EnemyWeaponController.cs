@@ -116,7 +116,6 @@ public class EnemyWeaponController : MonoBehaviour
     // once the particle system is stopped , disable the script .
     private void OnParticleSystemStopped()
     {
-        Debug.Log("particles stopped");
         enabled = false;
     }
 }

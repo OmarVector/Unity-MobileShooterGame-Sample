@@ -87,7 +87,7 @@ public class ENEMY : MonoBehaviour
     {
         var x = Random.Range(0, 100);
 
-        if (x < 80)
+        if (x < 70)
         {
             for (int i = 0; i < DropAmount; ++i)
             {
@@ -95,6 +95,11 @@ public class ENEMY : MonoBehaviour
             }
             
             return;
+        }
+
+        if (x > 70 && x < 80)
+        {
+            ScoreAndDropsManager.scoreAndDropsManager.GetPowerUP(transform.position);
         }
 
         if (x > 80 && x < 90)

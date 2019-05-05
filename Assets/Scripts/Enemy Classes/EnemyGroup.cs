@@ -126,10 +126,10 @@ public class EnemyGroup : MonoBehaviour
                 Enemies.Add(unit);
             }
                 break;
-            
+
             case EnemyType.EliteUnit:
             {
-                var unit = Instantiate(enemyGameObject, tweenPath.tween.PathGetPoint(0), Quaternion.Euler(0,180,0));
+                var unit = Instantiate(enemyGameObject, tweenPath.tween.PathGetPoint(0), Quaternion.Euler(0, 180, 0));
                 unit.transform.SetParent(gameObject.transform);
                 enemy = unit.GetComponent<ENEMY>();
                 enemy.SetEnemyProperties(enemyHealth, enemyDamage, score, dropAmount, false, this);
@@ -186,7 +186,8 @@ public class EnemyGroup : MonoBehaviour
         {
             Enemies[i].SetActive(true);
             var rd = Enemies[i].GetComponent<Rigidbody>();
-            rd.DOPath(tweenPath.wps.ToArray(), SpeedInSeconds, PathType.CatmullRom).SetUpdate(UpdateType.Fixed).OnComplete(TweenOnFinish[i])
+            rd.DOPath(tweenPath.wps.ToArray(), SpeedInSeconds, PathType.CatmullRom).SetUpdate(UpdateType.Fixed)
+                .OnComplete(TweenOnFinish[i])
                 .SetLookAt(0.01f);
 
             yield return new WaitForSeconds(spaceBetweenEachEnemy);
@@ -212,10 +213,9 @@ public class EnemyGroup : MonoBehaviour
         EnemyScoreCounter++;
         if (EnemyScoreCounter == enemySize)
         {
-            Debug.Log("MAX SCORE"); //TODO Adding mini celebration
             ScoreAndDropsManager.scoreAndDropsManager.Score += (score * enemySize);
             ScoreAndDropsManager.scoreAndDropsManager.UpdateScore();
-           gameObject.SetActive(false);
+            gameObject.SetActive(false);
         }
     }
 }

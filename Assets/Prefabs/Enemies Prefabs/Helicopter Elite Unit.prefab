@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 9213118706096206733}
   - component: {fileID: 4217429458824160309}
   m_Layer: 9
-  m_Name: Helicopter Mini Boss 01
+  m_Name: Helicopter Elite Unit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -94,7 +94,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 28.6, y: 13.79, z: 77.48}
+  m_Size: {x: 28.6, y: 43.62, z: 77.48}
   m_Center: {x: 0, y: -3.4, z: 2.6}
 --- !u!114 &4214919461006471430
 MonoBehaviour:
@@ -108,6 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbde3a97bf2d299408afb83dfc05a18e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weapon: {fileID: 0}
   healthCanvas: {fileID: 4360843289479188503}
   healthBar: {fileID: 8309639823199229704}
   healthText: {fileID: 2959882812364892407}

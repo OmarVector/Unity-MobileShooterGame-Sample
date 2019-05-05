@@ -12,7 +12,9 @@ public class WingCannonWeapon : WEAPON
         power = (ShipDataManager.shipDataManager.WingCannonLevel * 10) + BASEDAMAGE;
         
         //playing the particle system of the main cannon 
-        GetComponent<ParticleSystem>().Play();
+        var part = GetComponent<ParticleSystem>();
+        part.Play();
+        fireRate = part.emissionRate;
         
         // setting power increment , different from weapon to weapon .
         powerIncrease = 0.1f;
@@ -23,6 +25,6 @@ public class WingCannonWeapon : WEAPON
     {
         fireRate += powerIncrease;
         GetComponent<ParticleSystem>().emissionRate = fireRate;
-        Debug.Log("<b><color=Green> Wing Cannon Fire Rate = </color></b>");
+        Debug.Log("<b><color=Green> Wing Cannon Fire Rate </color></b>");
     }
 }

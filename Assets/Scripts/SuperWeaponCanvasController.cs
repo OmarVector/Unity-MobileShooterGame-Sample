@@ -45,10 +45,10 @@ public class SuperWeaponCanvasController : MonoBehaviour
     {
         canvas.enabled = true;
 
-        // number of shield
-        var sCount = ShipDataManager.shipDataManager.ShieldAmount;
+        // number of shield + number of shield we collect during the level , notice that those extra we collected are not saved to prevent players from farming them, same for laser
+        var sCount = ShipDataManager.shipDataManager.ShieldAmount + ScoreAndDropsManager.scoreAndDropsManager.tempShieldAmount;
         // number of laser, I cached them bec we need to check also if they are > 0
-        var lCount = ShipDataManager.shipDataManager.LaserAmount;    
+        var lCount = ShipDataManager.shipDataManager.LaserAmount + ScoreAndDropsManager.scoreAndDropsManager.tempLaserAmount;    
         
         // render the count of super weapon to text.
         shieldCount.text = sCount.ToString();

@@ -71,10 +71,10 @@ public class ExplosionPoolManager : MonoBehaviour
     {
         if (airIndex < PoolSizeAir)
         {
-            airIndex++;
             AirUnitParticles[airIndex].transform.position = trans.position;
             AirUnitParticles[airIndex].SetActive(true);
             AirUnitParticles[airIndex].GetComponent<ParticleSystem>().Play();
+            airIndex++;
         }
     }
    
@@ -85,12 +85,12 @@ public class ExplosionPoolManager : MonoBehaviour
         // Pick a random particle from pool to play when the air unit get destroyed 
         if (terrainIndex < PoolSizeTerrain)
         {
-            terrainIndex++;
             var pos = trans.position;
             pos.y += 15;
             TerrainUnitParticles[terrainIndex].transform.position = pos;
             TerrainUnitParticles[terrainIndex].SetActive(true);
             TerrainUnitParticles[terrainIndex].GetComponent<ParticleSystem>().Play();
+            terrainIndex++;
         }
     }
 
