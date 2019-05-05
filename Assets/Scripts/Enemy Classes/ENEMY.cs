@@ -46,6 +46,10 @@ public class ENEMY : MonoBehaviour
     {
         //TODO Adding score Logic.
         //TODO Drops
+
+        RandomDropControl();
+        ScoreAndDropsManager.scoreAndDropsManager.Score += Score;
+        ScoreAndDropsManager.scoreAndDropsManager.UpdateScore();
         enemyGroup.ScoreBonusCheck();
         // removing enemy from radar list
         RocketRadar.rocketRadar.EnemyTransform.Remove(transform);
@@ -77,6 +81,50 @@ public class ENEMY : MonoBehaviour
         // Culling any attached weapons
         if (weapon)
             weapon.Cull();
+    }
+
+    private void RandomDropControl()
+    {
+        var x = Random.Range(0, 100);
+
+        if (x < 80)
+        {
+            for (int i = 0; i < DropAmount; ++i)
+            {
+                ScoreAndDropsManager.scoreAndDropsManager.GetCoin(transform.position);
+            }
+            
+            return;
+        }
+
+        if (x > 80 && x < 90)
+        {
+            for (int i = 0; i < DropAmount; ++i)
+            {
+                ScoreAndDropsManager.scoreAndDropsManager.GetHealthKit(transform.position);
+            }
+            
+            return;
+        }
+
+        if (x > 90 && x < 95)
+        {
+            for (int i = 0; i < DropAmount; ++i)
+            {
+                ScoreAndDropsManager.scoreAndDropsManager.GetShield(transform.position);
+            }
+            
+            return;
+        }
+
+        if (x > 95)
+        {
+            for (int i = 0; i < DropAmount; ++i)
+            {
+                ScoreAndDropsManager.scoreAndDropsManager.GetLaser(transform.position);
+            }
+        }
+            
     }
    
 }

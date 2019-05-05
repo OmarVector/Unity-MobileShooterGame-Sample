@@ -213,6 +213,8 @@ public class EnemyGroup : MonoBehaviour
         if (EnemyScoreCounter == enemySize)
         {
             Debug.Log("MAX SCORE"); //TODO Adding mini celebration
+            ScoreAndDropsManager.scoreAndDropsManager.Score += (score * enemySize);
+            ScoreAndDropsManager.scoreAndDropsManager.UpdateScore();
            gameObject.SetActive(false);
         }
     }
