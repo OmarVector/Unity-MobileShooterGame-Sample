@@ -628,7 +628,6 @@ GameObject:
   - component: {fileID: 3701715522345586144}
   - component: {fileID: 306514645620093759}
   - component: {fileID: 2486458080280086050}
-  - component: {fileID: 4943104692519211625}
   m_Layer: 0
   m_Name: Turret Holder
   m_TagString: Untagged
@@ -696,32 +695,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!1773428102 &4943104692519211625
-ParentConstraint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3731979401294008867}
-  m_Enabled: 0
-  m_Weight: 1
-  m_TranslationAtRest: {x: -0.00000166893, y: 10.695342, z: 0}
-  m_RotationAtRest: {x: 0, y: 0, z: 0}
-  m_TranslationOffsets:
-  - {x: -0.0000026226044, y: 16.043013, z: 0}
-  m_RotationOffsets:
-  - {x: 0, y: 0, z: 0}
-  m_AffectTranslationX: 0
-  m_AffectTranslationY: 0
-  m_AffectTranslationZ: 0
-  m_AffectRotationX: 0
-  m_AffectRotationY: 1
-  m_AffectRotationZ: 0
-  m_IsContraintActive: 1
-  m_IsLocked: 0
-  m_Sources:
-  - sourceTransform: {fileID: 4611218700969371161}
-    weight: 1
 --- !u!1 &6214105288203621143
 GameObject:
   m_ObjectHideFlags: 0
@@ -768,8 +741,6 @@ GameObject:
   - component: {fileID: 8372420442307093997}
   - component: {fileID: 4529447683842628929}
   - component: {fileID: 56261427841418412}
-  - component: {fileID: 5131764432373504337}
-  - component: {fileID: 2383306872304415557}
   m_Layer: 0
   m_Name: Turret Guns
   m_TagString: Untagged
@@ -837,46 +808,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &5131764432373504337
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6450877642302422368}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300002, guid: add2564da1502b743bb99da8997d5e02, type: 3}
---- !u!1773428102 &2383306872304415557
-ParentConstraint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6450877642302422368}
-  m_Enabled: 1
-  m_Weight: 1
-  m_TranslationAtRest: {x: 0, y: -0.69533825, z: -1.7652893}
-  m_RotationAtRest: {x: 0, y: 0, z: 0}
-  m_TranslationOffsets:
-  - {x: -0.0000026226044, y: 15.000006, z: -2.647934}
-  m_RotationOffsets:
-  - {x: 0, y: 0, z: 0}
-  m_AffectTranslationX: 0
-  m_AffectTranslationY: 0
-  m_AffectTranslationZ: 0
-  m_AffectRotationX: 1
-  m_AffectRotationY: 0
-  m_AffectRotationZ: 0
-  m_IsContraintActive: 1
-  m_IsLocked: 0
-  m_Sources:
-  - sourceTransform: {fileID: 4611218700969371161}
-    weight: 1
 --- !u!1 &7706138066299602398
 GameObject:
   m_ObjectHideFlags: 0
@@ -966,11 +897,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Child Cannon
       objectReference: {fileID: 0}
-    - target: {fileID: 6121517584429746730, guid: 3db426d6c9ae47c499e6fc707ed46288,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8517094485100428027, guid: 3db426d6c9ae47c499e6fc707ed46288,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1025,21 +951,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2609748550156416730, guid: 3db426d6c9ae47c499e6fc707ed46288,
-        type: 3}
-      propertyPath: m_Sources.Array.data[0].sourceTransform
-      value: 
-      objectReference: {fileID: 4611218700969371161}
-    - target: {fileID: 2609748550156416730, guid: 3db426d6c9ae47c499e6fc707ed46288,
-        type: 3}
-      propertyPath: m_TranslationOffsets.Array.data[0].x
-      value: -14.999999
-      objectReference: {fileID: 0}
-    - target: {fileID: 2609748550156416730, guid: 3db426d6c9ae47c499e6fc707ed46288,
-        type: 3}
-      propertyPath: m_TranslationAtRest.x
-      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 7650981405712411414, guid: 3db426d6c9ae47c499e6fc707ed46288,
         type: 3}
@@ -1206,7 +1117,8 @@ PrefabInstance:
       propertyPath: enemyGun
       value: 
       objectReference: {fileID: 3701715522345586144}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2337424761653967576, guid: c503963f3debe4e4f8e61afb3102343c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c503963f3debe4e4f8e61afb3102343c, type: 3}
 --- !u!4 &4611218700969371161 stripped
 Transform:

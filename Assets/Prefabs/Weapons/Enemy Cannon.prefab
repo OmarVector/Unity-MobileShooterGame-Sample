@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8247585540772640505}
   - component: {fileID: 9171379444095479877}
   - component: {fileID: 8175974738160407581}
-  - component: {fileID: 2337424761653967576}
   - component: {fileID: 926511197777943827}
   m_Layer: 0
   m_Name: Enemy Cannon
@@ -4700,32 +4699,6 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!1773428102 &2337424761653967576
-ParentConstraint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5815410296071767592}
-  m_Enabled: 1
-  m_Weight: 1
-  m_TranslationAtRest: {x: 0, y: 4.5999994, z: -5.8000045}
-  m_RotationAtRest: {x: 0, y: 0, z: 0}
-  m_TranslationOffsets:
-  - {x: 0, y: 0, z: 0}
-  m_RotationOffsets:
-  - {x: 0, y: 0, z: 0}
-  m_AffectTranslationX: 1
-  m_AffectTranslationY: 1
-  m_AffectTranslationZ: 1
-  m_AffectRotationX: 0
-  m_AffectRotationY: 0
-  m_AffectRotationZ: 0
-  m_IsContraintActive: 1
-  m_IsLocked: 0
-  m_Sources:
-  - sourceTransform: {fileID: 0}
-    weight: 1
 --- !u!114 &926511197777943827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4741,4 +4714,6 @@ MonoBehaviour:
   CannonParticles:
   - {fileID: 9171379444095479877}
   lockRate: 0.5
+  gunPivot: {fileID: 0}
+  enemyGun: {fileID: 0}
   damage: 0

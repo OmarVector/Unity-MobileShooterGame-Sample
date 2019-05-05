@@ -46,7 +46,6 @@ GameObject:
   - component: {fileID: 764574646}
   - component: {fileID: 764574649}
   - component: {fileID: 764574648}
-  - component: {fileID: 764574647}
   m_Layer: 0
   m_Name: Tank Body
   m_TagString: Untagged
@@ -113,20 +112,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &764574647
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 764574645}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300000, guid: c1ef7896237900e4a8499e3bdbe29eab, type: 3}
 --- !u!1 &2146553368
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,8 +123,6 @@ GameObject:
   - component: {fileID: 2146553369}
   - component: {fileID: 2146553372}
   - component: {fileID: 2146553371}
-  - component: {fileID: 2146553370}
-  - component: {fileID: 8637258591888783033}
   m_Layer: 0
   m_Name: Tank Gun
   m_TagString: Untagged
@@ -207,46 +190,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &2146553370
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2146553368}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300002, guid: c1ef7896237900e4a8499e3bdbe29eab, type: 3}
---- !u!1773428102 &8637258591888783033
-ParentConstraint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2146553368}
-  m_Enabled: 0
-  m_Weight: 1
-  m_TranslationAtRest: {x: 0, y: 16.778883, z: -4.113841}
-  m_RotationAtRest: {x: 0, y: 0, z: 0}
-  m_TranslationOffsets:
-  - {x: 0, y: 10.179842, z: 1.4093933}
-  m_RotationOffsets:
-  - {x: 0, y: 0, z: 0}
-  m_AffectTranslationX: 0
-  m_AffectTranslationY: 0
-  m_AffectTranslationZ: 0
-  m_AffectRotationX: 1
-  m_AffectRotationY: 1
-  m_AffectRotationZ: 1
-  m_IsContraintActive: 1
-  m_IsLocked: 1
-  m_Sources:
-  - sourceTransform: {fileID: 2589616492502767345}
-    weight: 1
 --- !u!1 &1906773729292754298
 GameObject:
   m_ObjectHideFlags: 0
@@ -335,7 +278,6 @@ GameObject:
   - component: {fileID: 4629798463757049307}
   - component: {fileID: 7206733257647630728}
   - component: {fileID: 5178885855150184858}
-  - component: {fileID: 8058339344276804715}
   m_Layer: 0
   m_Name: Gun Pivot
   m_TagString: Untagged
@@ -402,19 +344,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &8058339344276804715
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5479940358890749577}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Radius: 0.49999994
-  m_Center: {x: 0, y: 7.105427e-15, z: 0.000015258788}
 --- !u!1 &6794447990709160453
 GameObject:
   m_ObjectHideFlags: 0
