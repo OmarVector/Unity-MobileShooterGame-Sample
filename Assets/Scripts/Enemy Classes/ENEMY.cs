@@ -1,11 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
+// Parent class for enemies
 public class ENEMY : MonoBehaviour
 {
-    // Enemy Unit Class that hold all properties of the enemy
-
     protected int Health; // Health
     protected int Damage; // Damage that will cause to main player
     private int Score; // Score amount when getting destroyed   

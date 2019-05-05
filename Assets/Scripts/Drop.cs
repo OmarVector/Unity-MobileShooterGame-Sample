@@ -16,13 +16,14 @@ public class Drop : MonoBehaviour
     private void ReturnToPool()
     {
         ScoreAndDropsManager.scoreAndDropsManager.ReturnToPool(gameObject, dropType);
+        Debug.Log("<color=yellow>Drops back to pool Invoked</color>");
+        time = 0;
     }
 
     private void OnCollected()
     {
-        ScoreAndDropsManager.scoreAndDropsManager.ReturnToPool(gameObject, dropType);
         CancelInvoke();
-
+        time = 0;
         switch (dropType)
         {
             case 1 :
@@ -30,6 +31,7 @@ public class Drop : MonoBehaviour
                 break;
             case 2 :
                 ScoreAndDropsManager.scoreAndDropsManager.tempCoinAmount++;
+                ScoreAndDropsManager.scoreAndDropsManager.ReturnToPool(gameObject, dropType);
                 break;
             case 3 :
                 ScoreAndDropsManager.scoreAndDropsManager.tempLaserAmount++;
@@ -42,6 +44,8 @@ public class Drop : MonoBehaviour
                 ScoreAndDropsManager.scoreAndDropsManager.WingCannonR.PowerUp();
                 break;
         }
+        
+        gameObject.SetActive(false);
     }
 
     private void OnTriggerStay(Collider other)

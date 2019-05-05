@@ -16,11 +16,13 @@ public class ExplosionPoolManager : MonoBehaviour
     // Scriptable Object reference for terrain units explosion
     [SerializeField] private ExplosionsContainer TerrainUnitContainer;
 
-    private List<GameObject> AirUnitParticles = new List<GameObject>();
-    private List<GameObject> TerrainUnitParticles = new List<GameObject>();
+    // private List<GameObject> AirUnitParticles = new List<GameObject>();
+    private LinkedList<GameObject> TerrainUnitParticles = new LinkedList<GameObject>();
 
-    private int airIndex;
-    private int terrainIndex;
+    private LinkedList<GameObject> AirUnitParticles = new LinkedList<GameObject>();
+
+  //  private int airIndex;
+  //  private int terrainIndex;
 
     public static ExplosionPoolManager explosionPoolManager = null;
 
@@ -51,7 +53,8 @@ public class ExplosionPoolManager : MonoBehaviour
             var partGO = Instantiate(AirUnitContainer.Particle_List[rand], transform.position, Quaternion.identity);
             partGO.SetActive(false);
             partGO.transform.SetParent(transform);
-            AirUnitParticles.Add(partGO);
+
+            AirUnitParticles.AddFirst(partGO);
         }
 
         // For Terrain Unit
@@ -61,7 +64,8 @@ public class ExplosionPoolManager : MonoBehaviour
             var partGO = Instantiate(TerrainUnitContainer.Particle_List[rand], transform.position, Quaternion.identity);
             partGO.SetActive(false);
             partGO.transform.SetParent(transform);
-            TerrainUnitParticles.Add(partGO);
+
+            TerrainUnitParticles.AddFirst(partGO);
         }
     }
 
@@ -69,29 +73,27 @@ public class ExplosionPoolManager : MonoBehaviour
     // Called when Air unit get destroyed
     public void PlayAirParticle(Transform trans)
     {
-        if (airIndex < PoolSizeAir)
-        {
-            AirUnitParticles[airIndex].transform.position = trans.position;
-            AirUnitParticles[airIndex].SetActive(true);
-            AirUnitParticles[airIndex].GetComponent<ParticleSystem>().Play();
-            airIndex++;
-        }
+        var airExplosion = AirUnitParticles.First.Value;
+        AirUnitParticles.RemoveFirst();
+
+        airExplosion.transform.position = trans.position;
+        airExplosion.SetActive(true);
+        airExplosion.GetComponent<ParticleSystem>().Play();
     }
-   
+
 
     // Called when particles Terrain get destroyed
     public void PlayTerrainParticles(Transform trans)
     {
-        // Pick a random particle from pool to play when the air unit get destroyed 
-        if (terrainIndex < PoolSizeTerrain)
-        {
-            var pos = trans.position;
-            pos.y += 15;
-            TerrainUnitParticles[terrainIndex].transform.position = pos;
-            TerrainUnitParticles[terrainIndex].SetActive(true);
-            TerrainUnitParticles[terrainIndex].GetComponent<ParticleSystem>().Play();
-            terrainIndex++;
-        }
+        var terrainExplosion = TerrainUnitParticles.First.Value;
+        TerrainUnitParticles.RemoveFirst();
+
+        var pos = trans.position;
+        pos.y += 15;
+
+        terrainExplosion.transform.position = pos;
+        terrainExplosion.SetActive(true);
+        terrainExplosion.GetComponent<ParticleSystem>().Play();
     }
 
     // Returning particles back to the pool once they finish playing .
@@ -99,8 +101,8 @@ public class ExplosionPoolManager : MonoBehaviour
     {
         go.SetActive(false);
         if (isAir)
-            airIndex--;
+            AirUnitParticles.AddFirst(go);
         else
-            terrainIndex--;
+            TerrainUnitParticles.AddFirst(go);
     }
 }

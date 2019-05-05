@@ -15,7 +15,7 @@ public class LaserWeapon : WEAPON, ISuperWeapon
     [SerializeField] private LayerMask layerMask;
 
     // reference to SuperWeaponCanvasController to disable it once its actiavted.
-    [SerializeField] private SuperWeaponCanvasController superWeaponCanvas;
+    [SerializeField] private JetStatusCanvasController jetStatusCanvas;
 
     // active time length
     private float time;
@@ -66,7 +66,7 @@ public class LaserWeapon : WEAPON, ISuperWeapon
         // saving data . 
         ShipDataManager.shipDataManager.SaveShipLevelsData();
         // calling disabled function on SuperWeaponCanvas.
-        superWeaponCanvas.Deactivate();
+        jetStatusCanvas.Deactivate();
     }
 
     // Deactivating Shield

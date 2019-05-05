@@ -17,10 +17,10 @@ public class PlayerController : MonoBehaviour
     private Camera cam;
 
     //List of Weapons that will be enabled once the player jet on start position
-    [SerializeField] private List<GameObject> Weapons = new List<GameObject>();
+    public List<GameObject> Weapons = new List<GameObject>();
 
     // Enable a small menu when player left his fingers from the screen to use super weapons.
-    [SerializeField] private SuperWeaponCanvasController superWeaponCanvasController;
+    [SerializeField] private JetStatusCanvasController jetStatusCanvasController;
 
     private bool isSuperMenu = false;
 
@@ -95,7 +95,7 @@ public class PlayerController : MonoBehaviour
 
             if (isSuperMenu)
             {
-                superWeaponCanvasController.Deactivate(); // it will be called once so no problem
+                jetStatusCanvasController.Deactivate(); // it will be called once so no problem
                 isSuperMenu = false;
             }
         }
@@ -110,7 +110,7 @@ public class PlayerController : MonoBehaviour
 
                 if (!isSuperMenu)
                 {
-                    superWeaponCanvasController.Activate();
+                    jetStatusCanvasController.Activate();
                     isSuperMenu = true;
                 }
            }
@@ -142,7 +142,7 @@ public class PlayerController : MonoBehaviour
 
             if (isSuperMenu)
             {
-                superWeaponCanvasController.Deactivate();
+                jetStatusCanvasController.Deactivate();
                 // it will be called once so no problem
                 isSuperMenu = false;
             }
@@ -154,7 +154,7 @@ public class PlayerController : MonoBehaviour
 
             if (!isSuperMenu)
             {
-                superWeaponCanvasController.Activate();
+                jetStatusCanvasController.Activate();
                 isSuperMenu = true;
             }
         }

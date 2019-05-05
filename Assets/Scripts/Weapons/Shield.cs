@@ -9,7 +9,7 @@ public class Shield : WEAPON, ISuperWeapon
     // active time length
     private float time;
 
-    [SerializeField] private SuperWeaponCanvasController superWeaponCanvas;
+    [SerializeField] private JetStatusCanvasController jetStatusCanvas;
 
     // calculating active time length for the shield
     private void Awake()
@@ -42,7 +42,7 @@ public class Shield : WEAPON, ISuperWeapon
         // saving data . 
         ShipDataManager.shipDataManager.SaveShipLevelsData();
         // calling disabled function on SuperWeaponCanvas.
-        superWeaponCanvas.Deactivate();
+        jetStatusCanvas.Deactivate();
     }
 
     // Deactivating Shield
