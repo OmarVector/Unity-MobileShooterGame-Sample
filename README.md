@@ -121,7 +121,8 @@ This a gif animation of how it looks like https://gfycat.com/UnhealthyBabyishAla
 2. Alll assets here created by me excpet for trees and some rocks where I did re-texturing for both of them, but they were a pack from unity store.
 3. All custom shaders are created using AmplifyShaderEditor .
 4. Before doing a build for mobile, make sure to check PlayerController script at Line 102 just to save a little bit of performance .
-5. This is a 5 day project I did :
+5. Explosion particles is an assetbundle for unity store.
+6. This is a 5 day project I did :
 	- everything is made except for 3D assets, I only created the space ship and basic enemy unit especaily for this project, however,I've imported all other assets I've already to save time. .
 	
 
