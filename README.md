@@ -1,4 +1,4 @@
-# Talking Tom : Earth Protectors
+# TT : Earth Protectors
 
 Space Shooter Game Prototype .
 
