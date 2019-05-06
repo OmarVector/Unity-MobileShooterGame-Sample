@@ -89,8 +89,11 @@ Space Shooter Game Prototype .
 
 - you can download directly the APK https://drive.google.com/file/d/1PxKn2oINoLdL4IG3TOqhWVfLVwvwyxWk/view?usp=sharing 
 or
-- make a clone to the project and try it inside editor.
-- This a gif animation of how it looks like https://gfycat.com/UnhealthyBabyishAlabamamapturtle
+1. make a clone to the project and try it inside editor.
+2. once its downloaded, switch the project platform to android for correct resolution , since the game designed for portrait mode.
+3. wait until everything is loaded and press play.
+
+This a gif animation of how it looks like https://gfycat.com/UnhealthyBabyishAlabamamapturtle 
 
 ###### Game Rules :
 1. Shoot all enemies and safe the earth .
@@ -115,6 +118,8 @@ or
 2. Alll assets here created by me excpet for trees and some rocks where I did re-texturinig for both of them.
 3. All shaders created here using AmplifyShaderEditor .
 4. Before doing a build for mobile, make sure to check PlayerController scrip Line 102
+5. This is a 5 day project I did :
+	- everything is made except for 3D assets, I only created the space ship and basic enemy unit, then imported everything else .
 	
 
 	
