@@ -160,6 +160,8 @@ public class ScoreAndDropsManager : MonoBehaviour
 
     /// <summary>
     /// using linked list , using linked list of length 3 or even 8 is overkill, but just to use one standard for now.
+    /// This is O(1) as we only add and remove first item in linked list
+    /// compared to older way where we check which item in the pool that is not active to call it which is O(N)
     /// </summary>
     public void GetHealthKit(Vector3 pos)
     {

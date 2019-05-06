@@ -146,7 +146,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 1300}
+  m_AnchoredPosition: {x: 0, y: 1521}
   m_SizeDelta: {x: 607, y: 617}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &18430082
@@ -434,13 +434,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_LocalRotation: {x: -0, y: 0.97298616, z: -0.23086344, w: 0}
-  m_LocalPosition: {x: -0.9, y: 33.4, z: 18.4}
+  m_LocalRotation: {x: -0.00092014833, y: 0.9729785, z: -0.23086168, w: -0.0038780128}
+  m_LocalPosition: {x: -1.07, y: 33.4, z: 18.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 26.696001, y: 180.00002, z: 0}
+  m_LocalEulerAnglesHint: {x: 26.696001, y: 180.45699, z: 0}
 --- !u!1 &862958502
 GameObject:
   m_ObjectHideFlags: 0
@@ -966,10 +966,10 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1080, y: 1920}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -1088,6 +1088,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Menu Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 4667966780575375895, guid: 394928ec56f3f574d9282100eb35d120,
+        type: 3}
+      propertyPath: LoadingScreenLeftDoor
+      value: 
+      objectReference: {fileID: 862958503}
+    - target: {fileID: 4667966780575375895, guid: 394928ec56f3f574d9282100eb35d120,
+        type: 3}
+      propertyPath: LoadingScreenRightDoor
+      value: 
+      objectReference: {fileID: 382177950}
+    - target: {fileID: 4667966780575375895, guid: 394928ec56f3f574d9282100eb35d120,
+        type: 3}
+      propertyPath: LoadingScreenLock
+      value: 
+      objectReference: {fileID: 18430081}
+    - target: {fileID: 4667966780575375895, guid: 394928ec56f3f574d9282100eb35d120,
+        type: 3}
+      propertyPath: StartButton
+      value: 
+      objectReference: {fileID: 1258502204}
     - target: {fileID: 4667966780575375888, guid: 394928ec56f3f574d9282100eb35d120,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1143,26 +1163,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4667966780575375895, guid: 394928ec56f3f574d9282100eb35d120,
-        type: 3}
-      propertyPath: LoadingScreenLeftDoor
-      value: 
-      objectReference: {fileID: 862958503}
-    - target: {fileID: 4667966780575375895, guid: 394928ec56f3f574d9282100eb35d120,
-        type: 3}
-      propertyPath: LoadingScreenRightDoor
-      value: 
-      objectReference: {fileID: 382177950}
-    - target: {fileID: 4667966780575375895, guid: 394928ec56f3f574d9282100eb35d120,
-        type: 3}
-      propertyPath: LoadingScreenLock
-      value: 
-      objectReference: {fileID: 18430081}
-    - target: {fileID: 4667966780575375895, guid: 394928ec56f3f574d9282100eb35d120,
-        type: 3}
-      propertyPath: StartButton
-      value: 
-      objectReference: {fileID: 1258502204}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 394928ec56f3f574d9282100eb35d120, type: 3}
 --- !u!23 &4961413668534762048

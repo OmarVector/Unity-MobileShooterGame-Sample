@@ -37,15 +37,13 @@ public class PlayerController : MonoBehaviour
             // Once the ship land on the start location, Start DO Animation of the main level.
             transform.parent.GetComponent<DOTweenAnimation>().DOPlay();
             enabled = true;
-           
-            
         };
     }
 
     public IEnumerator Wait(float timeToWait)
     {
         yield return new WaitForSeconds(timeToWait);
-        
+
         // enable player weapons
         for (int i = 0; i < Weapons.Count; ++i)
         {
@@ -56,7 +54,7 @@ public class PlayerController : MonoBehaviour
     public IEnumerator WaitToEnableCanvasAgain(float timeToWait)
     {
         yield return new WaitForSeconds(timeToWait);
-       if (isSuperMenu)
+        if (isSuperMenu)
             isSuperMenu = false;
     }
 
@@ -64,7 +62,6 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      
         // Setting Up Controllers for Jet to follow player fingers 
 #if UNITY_ANDROID
         if (Input.touchCount > 0)
@@ -72,7 +69,7 @@ public class PlayerController : MonoBehaviour
             //
             if (EventSystem.current.IsPointerOverGameObject(Input.GetTouch(0).fingerId))
                 return;
-            
+
             var camerapos = cam.transform.position;
             playerPos = transform.position;
 
@@ -101,10 +98,22 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            // TODO
-            // this if will be removed from build , since this is still called inside the editor.
+           
+            // Un comment this when doing build for android.
+            /*{
+                  Time.timeScale = 0.2f;
+                  Time.fixedDeltaTime = Time.timeScale * 0.02f;
+      
+                  if (!isSuperMenu)
+                  {
+                      jetStatusCanvasController.Activate();
+                      isSuperMenu = true;
+                  }
+              */
+            
+            // Comment this if condition when doing build for android.
             if (!Application.isEditor)
-           {
+            {
                 Time.timeScale = 0.2f;
                 Time.fixedDeltaTime = Time.timeScale * 0.02f;
 
@@ -113,7 +122,7 @@ public class PlayerController : MonoBehaviour
                     jetStatusCanvasController.Activate();
                     isSuperMenu = true;
                 }
-           }
+            }
         }
 #endif
 
@@ -122,7 +131,7 @@ public class PlayerController : MonoBehaviour
         {
             if (EventSystem.current.IsPointerOverGameObject())
                 return;
-            
+
             var camerapos = cam.transform.position;
 
             playerPos = transform.position; //A

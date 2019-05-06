@@ -1037,6 +1037,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 926511197777943827, guid: c503963f3debe4e4f8e61afb3102343c,
+        type: 3}
+      propertyPath: CannonParticles.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 926511197777943827, guid: c503963f3debe4e4f8e61afb3102343c,
+        type: 3}
+      propertyPath: CannonParticles.Array.data[1]
+      value: 
+      objectReference: {fileID: 9171379444095479877}
+    - target: {fileID: 926511197777943827, guid: c503963f3debe4e4f8e61afb3102343c,
+        type: 3}
+      propertyPath: gunPivot
+      value: 
+      objectReference: {fileID: 4817262412754420675}
+    - target: {fileID: 926511197777943827, guid: c503963f3debe4e4f8e61afb3102343c,
+        type: 3}
+      propertyPath: damage
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 926511197777943827, guid: c503963f3debe4e4f8e61afb3102343c,
+        type: 3}
+      propertyPath: enemyGun
+      value: 
+      objectReference: {fileID: 3701715522345586144}
     - target: {fileID: 2337424761653967576, guid: c503963f3debe4e4f8e61afb3102343c,
         type: 3}
       propertyPath: m_TranslationAtRest.x
@@ -1092,31 +1117,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 926511197777943827, guid: c503963f3debe4e4f8e61afb3102343c,
-        type: 3}
-      propertyPath: CannonParticles.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 926511197777943827, guid: c503963f3debe4e4f8e61afb3102343c,
-        type: 3}
-      propertyPath: CannonParticles.Array.data[1]
-      value: 
-      objectReference: {fileID: 9171379444095479877}
-    - target: {fileID: 926511197777943827, guid: c503963f3debe4e4f8e61afb3102343c,
-        type: 3}
-      propertyPath: gunPivot
-      value: 
-      objectReference: {fileID: 4817262412754420675}
-    - target: {fileID: 926511197777943827, guid: c503963f3debe4e4f8e61afb3102343c,
-        type: 3}
-      propertyPath: damage
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 926511197777943827, guid: c503963f3debe4e4f8e61afb3102343c,
-        type: 3}
-      propertyPath: enemyGun
-      value: 
-      objectReference: {fileID: 3701715522345586144}
     m_RemovedComponents:
     - {fileID: 2337424761653967576, guid: c503963f3debe4e4f8e61afb3102343c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c503963f3debe4e4f8e61afb3102343c, type: 3}
