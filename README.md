@@ -8,7 +8,7 @@ Space Shooter Game Prototype .
 1. Mainplayer Class : 
 	- Script that hold mainplayer properties such as health.	
 2. PlayerController :
-	- Tracking player input touch and showing when jet status will shown .
+	- Tracking player input touch and when jet status will be shown .
 3. JetStatusCanvasController :
 	- A script control and manage the behavoir of status canvas once its enabled.
 
@@ -70,7 +70,7 @@ Space Shooter Game Prototype .
 	- A script that manage level score .
 	- An Object pool for all drops .
 3. ShipDataManager :
-	- A SingleTone instance that hold all ship properties .
+	- A SingleTone instance that hold all ship data such as how many lasers player will have and coins...etc .
 4. UI_MainMenuManger :
 	- A script that manage and animate MainMenu canvas.
 	
@@ -83,24 +83,23 @@ Space Shooter Game Prototype .
 	- 1st list for terrains explosion "larger scale"
 	- 2nd list for air unit explosion .
 3.ParticlesCallback :
-	- its a simple script that should be attached to any particles that has to be returned back to pool once its finished playing.
+	- its a simple script that should be attached to any particles that has to be returned back to explosions pool once its finished playing.
 	
 ###### How to try the game :
 
-- you can download directly the APK https://drive.google.com/file/d/1PxKn2oINoLdL4IG3TOqhWVfLVwvwyxWk/view?usp=sharing .
+- You can download directly the APK https://drive.google.com/file/d/1PxKn2oINoLdL4IG3TOqhWVfLVwvwyxWk/view?usp=sharing .
 
 OR 
 
-
-1. make a clone to the project and try it inside editor.
-2. once its downloaded, switch the project platform to android for correct resolution , since the game designed for portrait mode.
-3. wait until everything is loaded and press play.
+1. Make a clone to the project and try it inside editor.
+2. Once its downloaded, switch the project platform to android for correct resolution , since the game designed for portrait mode.
+3. Wait until everything is loaded and press play.
 
 This a gif animation of how it looks like https://gfycat.com/UnhealthyBabyishAlabamamapturtle 
 
 ###### Game Rules :
 1. Shoot all enemies and safe the earth .
-2. Collected the drops 
+2. Collect the drops 
 	- yellow drops : Coins 
 	- Red drops : HealthKit "currently no limit for player health"
 	- Blue drops : Shield " by default players has 100 avaible shield to test "
@@ -110,6 +109,7 @@ This a gif animation of how it looks like https://gfycat.com/UnhealthyBabyishAla
 	- Use shield to enable shield super weapon
 	- Use Laser to enable laser super weapon
 	- or simply press back to exit the level.
+4. Only collected Coins will be saved inside ShipDataManager.
 
 ###### Well Known Issues :
 
@@ -118,11 +118,11 @@ This a gif animation of how it looks like https://gfycat.com/UnhealthyBabyishAla
 ## Note :
 
 1. The game runs on 30-40 fps on Hawuii G8 which is 4 years old device.
-2. Alll assets here created by me excpet for trees and some rocks where I did re-texturinig for both of them.
-3. All shaders created here using AmplifyShaderEditor .
-4. Before doing a build for mobile, make sure to check PlayerController scrip Line 102
+2. Alll assets here created by me excpet for trees and some rocks where I did re-texturing for both of them, but they were a pack from unity store.
+3. All custom shaders are created using AmplifyShaderEditor .
+4. Before doing a build for mobile, make sure to check PlayerController script at Line 102 just to save a little bit of performance .
 5. This is a 5 day project I did :
-	- everything is made except for 3D assets, I only created the space ship and basic enemy unit, then imported everything else .
+	- everything is made except for 3D assets, I only created the space ship and basic enemy unit especaily for this project, however,I've imported all other assets I've already to save time. .
 	
 
 	
