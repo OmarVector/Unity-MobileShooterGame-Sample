@@ -87,8 +87,11 @@ Space Shooter Game Prototype .
 	
 ###### How to try the game :
 
-- you can download directly the APK https://drive.google.com/file/d/1PxKn2oINoLdL4IG3TOqhWVfLVwvwyxWk/view?usp=sharing 
-or
+- you can download directly the APK https://drive.google.com/file/d/1PxKn2oINoLdL4IG3TOqhWVfLVwvwyxWk/view?usp=sharing .
+
+OR 
+
+
 1. make a clone to the project and try it inside editor.
 2. once its downloaded, switch the project platform to android for correct resolution , since the game designed for portrait mode.
 3. wait until everything is loaded and press play.
