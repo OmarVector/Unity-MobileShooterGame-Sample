@@ -87,9 +87,10 @@ Space Shooter Game Prototype .
 	
 ###### How to try the game :
 
-1. you can download directly the APK https://drive.google.com/file/d/1PxKn2oINoLdL4IG3TOqhWVfLVwvwyxWk/view?usp=sharing 
+- you can download directly the APK https://drive.google.com/file/d/1PxKn2oINoLdL4IG3TOqhWVfLVwvwyxWk/view?usp=sharing 
 or
-1. make a clone to the project and try it inside editor.
+- make a clone to the project and try it inside editor.
+- This a gif animation of how it looks like https://gfycat.com/UnhealthyBabyishAlabamamapturtle
 
 ###### Game Rules :
 1. Shoot all enemies and safe the earth .
